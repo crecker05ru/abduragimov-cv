@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
+    baseURL: '/abduragimov-cv', 
     head: {
       title: 'Frontend Developer Anvar Abduragimov',
       meta: [

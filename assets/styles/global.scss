@@ -1,6 +1,7 @@
-// @import url('./variables.scss');
+
 @import "variables";
 // @import "default";
+// @import url('./variables.scss');
 @import "theme";
 @import url('./default.scss');
 
@@ -15,6 +16,7 @@ body {
   height: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 
 .wrapper {
   max-width: 1600px;
