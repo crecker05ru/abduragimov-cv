@@ -54,6 +54,12 @@ photoGooglesEl.value.style.left = `${e.pageX - shiftX.value}px`
   left: 85px;
   cursor: pointer;
   z-index: 11;
+  @media screen and (max-width: $tablet) {
+    left: 78px;
+  }
+  @media screen and (max-width: $mobile) {
+    left: 70px;
+  }
 }
 &__googles-svg {
   // position: absolute;

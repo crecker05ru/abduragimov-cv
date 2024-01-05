@@ -41,7 +41,7 @@ const myCv: CV = {
     },
     maritalStatus: "Женат",
     dateOfBirth: "12 Февраля 1991",
-    objective: "Create convenient, accessible and interactive UI,create usefull web applications,grow as a professional in frontend development.",
+    objective: `Создавать удобный, доступный и интерактивный пользовательский интерфейс, создавать полезные веб-приложения, быть профессионалом в области фронтенд разработки.`,
     aboutMe: `
     Опыт работы в области разработки фронтенда более 2х лет.
 Отличное владение HTML, CSS ,JavaScript и TypeScript(базовый).
@@ -71,12 +71,12 @@ Frontend-разработчик
   ],
     skills: ["HTML", "CSS", "SCSS", "JavaScript", "TypeScript", "React JS","Redux","React-Redux", "Next.js","Vue 3","Vuex","Pinia", "Nuxt","Angular","NgRx","Git","BEM","RestAPI",
       
-      "Driving License - B"],
-    languages: ["English – B1","Russian - C3"],  
+      "Водительские права - B"],
+    languages: ["Английский – B1","Русский - C3"],  
     additionalEducation : [
-        {name: "November 2020 ,stepik.org ,Web development for beginners. HTML and CSS",certificateUrl:"https://stepik.org/cert/831092"},
-        {name: "December 2020  ,stepik.org , JavaScript for beginners",certificateUrl:"https://stepik.org/cert/836636"},
-        {name: "August 2021 , freecodecamp.org, JavaScript algoritms and data structures,",certificateUrl:"https://www.freecodecamp.org/certification/fcc61df5419-4666-479a-8c14-650407e6943c/javascript-algorithms-and-data-structures"},
+        {name: "Ноябрь 2020 ,stepik.org ,Web development for beginners. HTML and CSS",certificateUrl:"https://stepik.org/cert/831092"},
+        {name: "Декабрь 2020  ,stepik.org , JavaScript for beginners",certificateUrl:"https://stepik.org/cert/836636"},
+        {name: "Август 2021 , freecodecamp.org, JavaScript algoritms and data structures,",certificateUrl:"https://www.freecodecamp.org/certification/fcc61df5419-4666-479a-8c14-650407e6943c/javascript-algorithms-and-data-structures"},
       ]
   },
   "en": {
@@ -93,7 +93,13 @@ Frontend-разработчик
     maritalStatus: "married",
     dateOfBirth: "12th February 1991",
     objective: "Create convenient, accessible and interactive UI,create usefull web applications,grow as a professional in frontend development.",
-    aboutMe: "",
+    aboutMe: `More than 2 years of experience in front-end development.
+    Excellent knowledge of HTML, CSS, JavaScript and TypeScript (basic).
+    Experience with libraries and frameworks such as React, Next.js, Vue 3, Nuxt 2/3.
+    Knowledge of HTML5, CSS3, application of responsive design.
+    Experience with Git, module builders (Webpack, Vitejs).
+    Ensuring cross-browser and cross-platform compatibility.
+    The level of English is sufficient to read technical documentation and communicate on everyday topics.`,
     education: ["2009 — 2014  Dagestan State Institute of National Economy,department of Information Technology,specialist degree."],
     workExperience: ["Kalimat.io, 1st April 2022 – present.Position – frontend developer.Responsibilities - task management in ClickUp,layout drawing with Figma and SCSS preprocessor,writing code on Next.js framework,rendering data from the server in UI,object typing with TypeScript,updating remote branch in GitLab repository with Git and Bash."],
     skills: ["HTML", "CSS", "SCSS", "JavaScript", "TypeScript", "React JS","Redux","React-Redux", "Next.js","Vue 3","Vuex","Pinia", "Nuxt","Angular","NgRx","Git","BEM","RestAPI",

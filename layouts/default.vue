@@ -8,6 +8,14 @@
     <span class="header__switch-span"></span>
     <input class="header__switch-input" type="checkbox" @click="switchTheme" v-model="isChecked" />
   </label>
+  <!-- <div>
+    <span>Language</span>
+    <label class="header__switch" :class="{'header__switch-checked': language === 'ru'}">
+    <span class="header__switch-span"></span>
+    <input class="header__switch-input" type="checkbox" @click="switchTheme" v-model="language" />
+  </label>
+  </div> -->
+
 </div>
   </header>
   <main class="main">
@@ -27,6 +35,7 @@ import { ref } from 'vue';
 
 const isLightTheme = ref(true)
 const isChecked = ref(false)
+const language = ref("en")
 const switchTheme = () => {
   isLightTheme.value = !isLightTheme.value
 }
@@ -58,6 +67,8 @@ const switchTheme = () => {
   flex-direction: column;
   height: 100%;
   color: var(--main-text-color);
+  // background-color: var(--main-background-color);
+
 }
 .header {
   &__inner {
@@ -67,7 +78,7 @@ const switchTheme = () => {
   padding-bottom: 1rem;
   height: 80px;
   // background-color: var(--header-background-color);
-  background: linear-gradient(to right ,#fff,var(--header-background-color));
+  background: linear-gradient(to right ,var(--gradient-from-color),var(--gradient-to-color));
   color: var(--secondary-text-color);
   }
   &__switch {

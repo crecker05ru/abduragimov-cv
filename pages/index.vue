@@ -9,26 +9,33 @@
       </div>
     </header>
     <section>
+      <div class="my-cv__language-switch">
+    <label class="my-cv__switch" :class="{'my-cv__switch-checked': languageCheckbox}">
+    <span class="my-cv__switch-span"></span>
+    <span class="my-cv__switch-lang-en">En</span><span class="my-cv__switch-lang-ru">Ru</span>
+    <input class="my-cv__switch-input" type="checkbox" @click="switchLanguage" v-model="languageCheckbox" />
+  </label>
+  </div>
       <address>
-      <p>Address: {{ currentCv.address }}</p>
-      <p>Email: {{ currentCv.contacts.email }}</p>
-      <p>Phone: {{ currentCv.contacts.phone}}</p>
-      <p>Telegram: {{ currentCv.contacts.telegram }}</p>
-      <p>Github: {{ currentCv.contacts.gitHub }}</p>
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.address }}:</span> <span class="my-cv__description-value">{{ currentCv.address }}</span></p>
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.email }}:</span> <span class="my-cv__description-value">{{ currentCv.contacts.email }}</span></p>
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.phone }}:</span> <span class="my-cv__description-value">{{ currentCv.contacts.phone}}</span></p>
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.telegram }}:</span> <span class="my-cv__description-value">{{ currentCv.contacts.telegram }}</span></p>
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.github }}:</span><span class="my-cv__description-value">{{ currentCv.contacts.gitHub }}</span></p>
       </address>
-      <p>Marital status: {{ currentCv.maritalStatus }}</p>
-      <p>Date of birth: {{ currentCv.dateOfBirth }}</p>
-      <p>Objective: {{ currentCv.objective }}</p>
-      <ul class="my-cv__list_column">Education: 
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.maritalStatus }}:</span> <span class="my-cv__description-value">{{ currentCv.maritalStatus }}</span></p>
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.dateOfBirth }}:</span> <span class="my-cv__description-value">{{ currentCv.dateOfBirth }}</span></p>
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.objective }}:</span> <span class="my-cv__description-value">{{ currentCv.objective }}</span></p>
+      <ul class="my-cv__list_column">{{ currentDescription.education }}: 
         <li v-for="(ed,index ) in currentCv.education" :key="index">{{ ed }}</li>
       </ul>
-      <ul class="my-cv__list_column">Work Experiance: 
+      <ul class="my-cv__list_column">{{ currentDescription.workExperience }}: 
         <li v-for="(exper,index ) in currentCv.workExperience" :key="index">{{ exper }}</li>
       </ul>
-      <ul class="my-cv__list_row">Skills: 
+      <ul class="my-cv__list_row">{{ currentDescription.skills }}: 
         <li v-for="(skill,index ) in currentCv.skills" :key="index">{{ skill }}</li>
       </ul>
-      <ul class="my-cv__list_column">Additional education: 
+      <ul class="my-cv__list_column">{{ currentDescription.additionalEducation }}: 
         <li v-for="(add,index ) in currentCv.additionalEducation" :key="index"><a :href="add.certificateUrl" target="blank">{{ add.name }}</a></li>
       </ul>
     </section>
@@ -52,7 +59,8 @@ const descriptionMap = {
         workExperience: "Опыт работы",
         skills: "Навыки",
         additionalEducation: "Повышение квалификации",
-        aboutMe: "Обо мне"
+        aboutMe: "Обо мне",
+        portfolio: "Портфолио"
 
     },
     "en":{
@@ -68,16 +76,111 @@ const descriptionMap = {
         workExperience: "Work Experiance",
         skills: "Skills",
         additionalEducation: "Additional education",
-        aboutMe: "About me"
+        aboutMe: "About me",
+        portfolio: "Portfolio"
 
     }
 }
+const repos = ref([])
 const currentLanguage = ref("en")
+  const languageCheckbox = ref(false)
+  const switchLanguage = () => {
+    console.log(currentLanguage.value,"currentLanguage.value")
+    if(currentLanguage.value === "en") {
+      currentLanguage.value = "ru"
+    }else {
+      currentLanguage.value = "en"
+    }
+    // language.value === "en" ? language.value = "ru" : language.value = "en"
+  }
 const currentCv = computed<CVInfo>(() => myCv[currentLanguage.value])
+const currentDescription = computed(() => descriptionMap[currentLanguage.value])
+onMounted(() => {
+  (async () => {
+    // const resp = await fetch("https://api.github.com/users/crecker05ru/repos")
+    // console.log(resp)
+    // const body = await resp.json()
+    // repos.value = body
+    // console.log(body)
+    // const resp1 = await fetch("https://api.github.com/repos/crecker05ru/abduragimov-cv")
+    // const body1 = await resp1.json()
+    // console.log(body1)
+    const resp1 = await fetch("https://api.github.com/repos/crecker05ru/abduragimov-cv/stats/code_frequency")
 
+  })()
+})
 </script>
 <style lang="scss" scoped>
 .my-cv {
+  &__description-row {
+    margin-bottom: 4px;
+  }
+  &__description-key {
+    font-weight: 800;
+    color: var(--secondary-text-color);
+    margin-right: 12px;
+  }
+  // &__language-switch {
+  //   display: absolute;
+  // }
+  &__switch {
+    display: block;
+    position: relative;
+    width: 42px;
+    height: 22px;
+    background-color: rgb(110, 110, 110);
+    border-radius: 12px;
+  }
+  &__switch-checked {
+    background-color: #c7c7c7;
+    & .my-cv__switch-span{
+      transform: translate(150%,0);
+      background-color: #0691ff;
+    }
+    & .my-cv__switch-lang-en {
+      display: block;
+    }
+    & .my-cv__switch-lang-ru {
+      display: none;
+    }
+  }
+  &__switch-lang-en {
+    display: none;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color: #1b1b1b;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 800;
+  }
+  &__switch-lang-ru {
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: #fff;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 800;
+  }
+  &__switch-span { 
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    z-index: 1;
+  }
+  &__switch-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    opacity: 0;
+  }
   &__photo {
     position: relative;
   }
