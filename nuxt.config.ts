@@ -12,12 +12,12 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ["~/assets/styles/global.scss"],
+  css: ["./assets/styles/global.scss"],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-            additionalData: '@import "~/assets/styles/variables.scss";',
+            additionalData: '@import "./assets/styles/variables.scss";',
         },
     },
     },
