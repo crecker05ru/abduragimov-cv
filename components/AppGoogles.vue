@@ -1,6 +1,6 @@
 <template>
         <div ref="photoGooglesEl" class="app-googles__photo-googles" draggable="true" @dragstart="handleDragStart" @dragend="handleDragEnd">
-          <svg class="app-googles__googles-svg"  fill="#00003fdf" version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+          <svg class="app-googles__googles-svg"  :class="[darkMode ? 'night-glasses' : 'sun-glasses']" color="currentColor" fill="#00003fdf" version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 250 750 265"
 	 style="enable-background:new 0 0 750 750;" xml:space="preserve">
 <switch>
@@ -23,11 +23,14 @@
   </svg>
         </div>
 </template>
-<script setup>
+<script setup lang="ts">
+defineProps<{
+  darkMode?: boolean;
+}>()
 const photoGooglesEl = ref()
 const shiftX = ref(0)
 const shiftY = ref(0)
-const handleDragStart = (e) => {
+const handleDragStart = (e: any) => {
 console.log('handleDragStart',e)
 console.log('e.clientY',e.clientY)
 console.log('e.offsetY',e.offsetY)
@@ -36,7 +39,7 @@ console.log('photoGooglesEl.value',photoGooglesEl.value.getBoundingClientRect())
 shiftX.value = e.clientX - photoGooglesEl.value.getBoundingClientRect().left
 shiftY.value = e.clientY - photoGooglesEl.value.getBoundingClientRect().top
 }
-const handleDragEnd = (e) => {
+const handleDragEnd = (e: any) => {
   console.log('handleDragStart',e)
   console.log('e.clientY',e.clientY)
 console.log('e.offsetY',e.offsetY)
@@ -69,5 +72,14 @@ photoGooglesEl.value.style.left = `${e.pageX - shiftX.value}px`
   // height: 1rem;
 }
 }
-
+.night-glasses {
+  fill: #f6e49c88;
+  color: #f6e49c88;
+  transition: color,fill ease 1s 1s;
+}
+.sun-glasses {
+  fill: #00003fdf;
+  color: #00003fdf;
+  transition: color,fill ease 1s 1s;
+}
 </style>

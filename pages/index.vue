@@ -41,9 +41,33 @@
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.aboutMe }}:</span> <span class="my-cv__description-value">{{ currentCv.aboutMe }}</span></p>
     </section>
     <section class="my-cv__section">
-      <ul class="my-cv__list_column"><span class="my-cv__description-key">{{ currentDescription.myRepos }}:<span>{{ repos?.length }}</span></span> 
-        <li class="my-cv__repos-item"  v-for="(repo,index ) in repos" :key="index"><span class="my-cv__description-key">{{ currentDescription.name }}</span><span class="my-cv__description-value"><a :href="repo.html_url" target="blank">{{ repo.name }}</a></span> <span class="my-cv__description-key">{{ currentDescription.language }}</span><span class="my-cv__description-value">{{ repo.language }}</span> <span class="my-cv__description-key">{{ currentDescription.createdAt }}</span> <span class="my-cv__description-value">{{ new Date(repo.created_at).toLocaleDateString() }}</span></li>
-      </ul>
+      <!-- <iframe src="https://crecker05ru.github.io/halva/"></iframe> -->
+      <!-- <ul class="my-cv__list_column"><span class="my-cv__description-key">{{ currentDescription.myRepos }}:<span>{{ repos?.length }}</span></span> 
+        <li class="my-cv__repos-item"  v-for="(repo,index ) in repos" :key="index">
+          <div class="my-cv__item-inner">
+          <span class="my-cv__description-key">{{ currentDescription.name }}</span><span class="my-cv__description-value block__primal"><a :href="repo.html_url" target="blank">{{ repo.name }}</a></span> <span class="my-cv__description-key">{{ currentDescription.language }}</span><span class="my-cv__description-value block__secondary">{{ repo.language }}</span> <span class="my-cv__description-key">{{ currentDescription.createdAt }}</span> <span class="my-cv__description-value block__alternate">{{ new Date(repo.created_at).toLocaleDateString() }}</span>
+        </div>
+        <div><iframe :src="reposDeploys[String(repo.name)]" allow="fullscreen" style="border: none;" loading="lazy"></iframe></div>
+      </li>
+      </ul> -->
+      <table class="my-cv__table repos-table">
+        <thead class="repos-table__header">
+          <tr class="repos-table__row">
+            <th class="repos-table__header-cell cell__name">{{ currentDescription.name }}</th>
+            <th class="repos-table__header-cell cell__language">{{ currentDescription.language }}</th>
+            <th class="repos-table__header-cell cell__created">{{ currentDescription.createdAt }}</th>
+            <th class="repos-table__header-cell cell__description">{{ currentDescription.description }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="repos-table__row" v-for="(repo,index ) in repos" :key="index">
+          <td class="repos-table__cell cell__name"><a class="cell__link" :href="repo.html_url" target="blank">{{ repo.name }}</a></td>
+          <td class="repos-table__cell cell__language"><span class="cell__language-text" :class="repo.language" v-if="repo.language">{{ repo.language }}</span></td>
+          <td class="repos-table__cell cell__created" >{{ new Date(repo.created_at).toLocaleDateString() }}</td>
+          <td class="repos-table__cell cell__description"></td>
+        </tr>
+        </tbody>
+      </table>
     </section>
   </div>
 </template>
@@ -71,7 +95,8 @@ const descriptionMap = {
         myRepos: "Мои репо",
         name: "Название",
         language: "Язык",
-        createdAt: "Создан"
+        createdAt: "Создан",
+        description: "Описание"
 
     },
     "en":{
@@ -92,11 +117,13 @@ const descriptionMap = {
         myRepos: "My repos",
         name: "Name",
         language: "Language",
-        createdAt: "Created at"
+        createdAt: "Created at",
+        description: "Description"
 
     }
 }
 const repos = ref<Repos[]>()
+const reposDeploys: {[key: string]: any} = {}
 const currentLanguage = ref("en")
   const languageCheckbox = ref(false)
   const switchLanguage = () => {
@@ -129,10 +156,10 @@ onMounted(() => {
     console.log('diff',diff)
     console.log('hour',hour)
     console.log('diff > hour',diff > hour)
-    if(reposData){
+    if(reposData && diff < hour){
       repos.value = JSON.parse(reposData) as Repos[]
     }else {
-    const resp = await fetch("https://api.github.com/users/crecker05ru/repos?sort=created&direction=desc")
+    const resp = await fetch("https://api.github.com/users/crecker05ru/repos?sort=created&direction=desc&per_page=100")
     // const resp = await fetch("https://api.github.com/users/crecker05ru/repos")
     console.log(resp)
     const body = await resp.json()
@@ -142,7 +169,14 @@ onMounted(() => {
     localStorage.setItem("updatedDate",String(updatedDate))
     localStorage.setItem("reposData",JSON.stringify(body))
     }
-
+      repos.value?.forEach((repo) => {
+        if(repo.has_pages){
+          const ghPagesDeployUrl = `https://crecker05ru.github.io/${repo?.name}`
+          if(!reposDeploys[String(repo?.name)]){
+            reposDeploys[String(repo?.name)] = ghPagesDeployUrl
+          }
+        }
+      })
   })()
 })
 </script>
@@ -155,6 +189,7 @@ onMounted(() => {
     font-weight: 800;
     color: var(--secondary-text-color);
     margin-right: 12px;
+    transition: color ease 1s 1s;
   }
   &__section {
     margin-bottom: 3rem;
@@ -262,5 +297,139 @@ onMounted(() => {
 
   }
 }
+&__repos-item {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+&__item-inner {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+}
+.block {
+  &__primal,&__secondary,&__alternate {
+    padding: 4px 2px;
+    color: var(--item-text-color);
+    border-radius: 4px;
+  }
+  &__primal {
+    background-color: var(--primal-background-color);
+  }
+  &__secondary {
+    background-color: var(--secondary-background-color);
+  }
+  &__alternate {
+    background-color: var(--alternate-background-color);
+  }
+}
+.repos-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &__row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--main-text-color);
+  }
+  &__cell,&__header-cell {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 20px;
+    max-width: 24%;
+    overflow: hidden;
+    @media screen and (max-width: $tablet) {
+      min-width: 60px;
+      font-size: 13px;
+  }
+    @media screen and (max-width: $mobile) {
+      min-width: 40px;
+      font-size: 12px;
+  }
+    // & > a{
+    //   max-width: 100%;
+    //   overflow: hidden;
+    // }
+  }
+}
+.cell {
+  &__name {
+    min-width: 160px;
+    transition: color ease 1s 1s;
+    @media screen and (max-width: $tablet) {
+      min-width: 100px;
+    }
+    @media screen and (max-width: $mobile) {
+      min-width: 60px;
+    }
+  }
+  &__language {
+    // max-width: 100px;
+    text-align: center;
+    transition: color ease 1s 1s;
+  }
+  &__language-text {
+    display: inline-block;
+    width: fit-content;
+    text-align: center;
+    padding: 2px 4px;
+    // background-color:#000000;
+    // color: var(--item-text-color);
+    border-radius: 4px;
+    filter: brightness(1.3);
+    // transition: color ease 1s 1s;
+  }
+  &__created {
+max-width: 100px;
+text-align: center;
+transition: color ease 1s 1s;
+  }
+  &__description {
+    min-width: 120px;
+    transition: color ease 1s 1s;
+    @media screen and (max-width: $tablet) {
+      min-width: 100px;
+    }
+    @media screen and (max-width: $mobile) {
+      min-width: 60px;
+    }
+  }
+  &__link {
+    // display: inline-block;
+    // width: 100%;
+    // max-width: 160px;
+    // overflow: hidden;
+    // text-overflow: clip;
+    display: block;
+    padding: 2px 4px;
+    max-width: 80%;
+    // transition: color ease 1s 1s;
+    border-radius: 4px;
+    &:hover {
+      background-color: var(--link-hover-color);
+      color: var(--item-text-color);
+    }
+
+    // width:200px;
+    // text-overflow: ellipsis;
+    // overflow: hidden;
+    // white-space: nowrap;
+
+    // min-width: 20%;
+    // max-width: 24%;
+    // @supports (-webkit-line-clamp: 1) {
+    //   display: -webkit-box;
+    //   -webkit-line-clamp: 1;
+    //   -webkit-box-orient: vertical;
+    // }
+  }
 }
 </style>

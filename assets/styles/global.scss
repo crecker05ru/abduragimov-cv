@@ -5,6 +5,7 @@
 @import "theme";
 @import url('./default.scss');
 @import url('./fonts.scss');
+@import url('./languages.scss');
 
 * {
   margin: 0;
@@ -61,3 +62,4 @@ body {
   height: 100%;
   overflow: hidden;
 }
+
