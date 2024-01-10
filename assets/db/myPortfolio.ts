@@ -34,7 +34,8 @@ export const myPortfolio: MyPortfolio = {
       sourceCodeUrl: "https://github.com/crecker05ru/plants-rss",
       startedAt: "",
       completedAt: ""
-    },{
+    }
+    ,{
       title: "connections-rss",
       objective: "Создать приложение для группового общения или общения с другим пользователем",
       description: "Приложение для обмена сообщениями используя Rest API",
@@ -63,7 +64,8 @@ export const myPortfolio: MyPortfolio = {
       sourceCodeUrl: "https://github.com/crecker05ru/async-race",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "HTML-builder",
       objective: "Создать свой сборщик в рамках курса RS",
       description: "Сборщик создан на Node.js ,собирает файлы,переписывает и очищает",
@@ -72,7 +74,8 @@ export const myPortfolio: MyPortfolio = {
       sourceCodeUrl: "https://github.com/crecker05ru/HTML-builder",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "CheGotovit",
       objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
       description: "Без еды человек долго не протянет ,а без хорошей и полезной еды протянет,но не долго.В строке поиска вбиваете название продукта,из чего бы вы хотели приготовить себе еду,и сразу видите всевозможные рецепты и их состав вплоть до химических элементов",
@@ -81,67 +84,54 @@ export const myPortfolio: MyPortfolio = {
       sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "Order table",
-      objective: "Создать прложения для совместных покупок и внтуренним чатом,изучить WebSockets",
-      description: "",
+      objective: "Создать прложение для совместных покупок и внтуренним чатом,изучить WebSockets",
+      description: "Приложение для совместных покупок и внутренним чатом",
       technologies: "React/Next.js,Node.js,Express.js,Postgres,WebSockets",
       deployUrl: "https://bikeband-order-table-client-6ctgq6oi2-crecker05ru.vercel.app/",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
+      sourceCodeUrl: "https://github.com/crecker05ru/bikeband-order-table-client",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "Youtube client",
       objective: "Создать прложение для совместных покупок и внтуренним чатом,изучить WebSockets",
       description: "Проект написаный в рамках курса RS Shcool - UI для поиска видео yotube с возможностью добавления в избранные профиля.",
       technologies: "Angular,NgRx,Material UI",
       sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
-      deployUrl: "",
+      deployUrl: "https://github.com/crecker05ru/youtube-client",
       startedAt: "",
       completedAt: ""
-    },{
-      title: "Conversation",
-      objective: "Создать приложение для совместных покупок и внтуренним чатом,изучить WebSockets",
-      description: "Проект написаный в рамках курса RS Shcool - UI для поиска видео yotube с возможностью добавления в избранные профиля.",
-      technologies: "Angular,NgRx",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
-      deployUrl: "",
+    },
+    {
+      title: "golden-layout",
+      objective: "Сверстать сайт",
+      description: "Сайт-макет, без адаптива",
+      technologies: "HTML,CSS,Javascript",
+      sourceCodeUrl: "https://github.com/crecker05ru/golden-layout2",
+      deployUrl: "https://crecker05ru.github.io/golden-layout2/",
       startedAt: "",
       completedAt: ""
-    },{
-      title: "bikeband-order-table-client ",
-      objective: "",
-      description: "",
-      technologies: "Vue, Quasar",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
-      deployUrl: "",
-      startedAt: "",
-      completedAt: ""
-    },{
-      title: "golden-layout2 ",
-      objective: "Создать прложения для совместных покупок и внтуренним чатом,изучить WebSockets",
-      description: "Проект написаный в рамках курса RS Shcool - UI для поиска видео yotube с возможностью добавления в избранные профиля.",
-      technologies: "Angular,NgRx",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
-      deployUrl: "",
-      startedAt: "",
-      completedAt: ""
-    },{
+    },
+    {
       title: "nextjs-nodejs-graphql-mysql-training ",
-      objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
-      description: "",
-      technologies: "React",
+      objective: "Изучить GraphQL,взаимодействие с GraphQL на сервере и клиенте",
+      description: "Стандартная тудушка вместе с серверной частью",
+      technologies: "React/Next.JS,GraphQL,MySQL",
       deployUrl: "",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
+      sourceCodeUrl: "https://github.com/crecker05ru/nextjs-nodejs-graphql-mysql-training",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "magazine-stiled-blog",
-      objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
-      description: "",
-      technologies: "React",
-      deployUrl: "",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
+      objective: "Верстка сайта",
+      description: "Моя первая сверстаная страница,без какого либо респонсива и адаптива )",
+      technologies: "HTML,CSS",
+      deployUrl: "https://crecker05ru.github.io/magazine-stiled-blog/",
+      sourceCodeUrl: "https://github.com/crecker05ru/magazine-stiled-blog/tree/dev",
       startedAt: "",
       completedAt: ""
     },
@@ -150,130 +140,121 @@ export const myPortfolio: MyPortfolio = {
   "en": [
     {
       title: "momentum-rss",
-      objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
-      description: "",
-      technologies: "Javascript,Rest API",
-      deployUrl: "",
+      objective: "Write an analogue of the Google Momentum plugin from scratch",
+      description: "An application for relaxation: with pictures of wildlife in the background, a built-in player, wise quotes, the weather for today, and in the center of everything - time, so as not to stay too long )",
+      technologies: "HTML,CSS,Javascript,Webpack,Rest API",
+      deployUrl: "https://crecker05ru.github.io/momentum-rss/",
       sourceCodeUrl: "https://github.com/crecker05ru/momentum-rss",
       startedAt: "",
       completedAt: ""
     },
     {
       title: "plants-rss",
-      objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
-      description: "",
-      technologies: "Javascript,Rest API",
-      deployUrl: "",
+      objective: "Design a website as part of the RS course",
+      description: "Gardening website",
+      technologies: "HTML,CSS,Javascript",
+      deployUrl: "https://crecker05ru.github.io/plants-rss/",
       sourceCodeUrl: "https://github.com/crecker05ru/plants-rss",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "connections-rss",
-      objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
-      description: "",
-      technologies: "Javascript,Rest API",
+      objective: "Create an application for group communication or communication with another user",
+      description: "Messaging application using Rest API",
+      technologies: "Angular,NgRx,Rest API",
       deployUrl: "",
       sourceCodeUrl: "https://github.com/crecker05ru/connections-rss",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "e-commerce",
-      objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
-      description: "",
-      technologies: "Javascript,Rest API",
+      objective: "Create an online store as part of the RS course",
+      description: "Online store for purchasing organic products",
+      technologies: "Jira,React ,Redux, RTK Query,Rest API",
       deployUrl: "",
       sourceCodeUrl: "https://github.com/High-lavander/e-commerce",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "async-race",
-      objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
-      description: "",
-      technologies: "Javascript,Rest API",
+      objective: "Create an application to interact with the server as part of the RS course",
+      description: "We're organizing races! Just make sure your engine doesn't let you down )",
+      technologies: "HTML,CSS,Javascript,HTTP,Rest API",
       deployUrl: "",
       sourceCodeUrl: "https://github.com/crecker05ru/async-race",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "HTML-builder",
-      objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
-      description: "",
+      objective: "Create your own collector as part of the RS course",
+      description: "The collector is created on Node.js, collects files, rewrites and cleanses",
       technologies: "Javascript,Node JS",
       deployUrl: "",
       sourceCodeUrl: "https://github.com/crecker05ru/HTML-builder",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "CheGotovit",
-      objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
-      description: "",
-      technologies: "React",
-      deployUrl: "",
+      objective: "Create an application to search for recipes with a detailed description of the composition of products and their nutrients",
+      description: "A person will not last long without food, and without good and healthy food he will last, but not for long. In the search bar, enter the name of the product, what you would like to cook your food from, and you will immediately see all sorts of recipes and their composition, down to the chemical elements",
+      technologies: "React,PWA,Rest API",
+      deployUrl: "https://starlit-twilight-3360a5.netlify.app/",
       sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "Order table",
-      objective: "Создать прложения для совместных покупок и внтуренним чатом,изучить WebSockets",
-      description: "",
+      objective: "Create an application for joint purchases and internal chat, explore WebSockets",
+      description: "Application for joint purchases and internal chat",
       technologies: "React/Next.js,Node.js,Express.js,Postgres,WebSockets",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
-      deployUrl: "",
+      deployUrl: "https://bikeband-order-table-client-6ctgq6oi2-crecker05ru.vercel.app/",
+      sourceCodeUrl: "https://github.com/crecker05ru/bikeband-order-table-client",
       startedAt: "",
       completedAt: ""
     },
     {
       title: "Youtube client",
-      objective: "Создать прложение для совместных покупок и внтуренним чатом,изучить WebSockets",
-      description: "Проект написаный в рамках курса RS Shcool - UI для поиска видео yotube с возможностью добавления в избранные профиля.",
+      objective: "Create an application for joint purchases and internal chat, explore WebSockets",
+      description: "A project written as part of the RS School course - UI for searching yotube videos with the ability to add to profile favorites.",
       technologies: "Angular,NgRx,Material UI",
       sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
-      deployUrl: "",
+      deployUrl: "https://github.com/crecker05ru/youtube-client",
       startedAt: "",
       completedAt: ""
-    },{
-      title: "Conversation",
-      objective: "Создать приложение для совместных покупок и внтуренним чатом,изучить WebSockets",
-      description: "Проект написаный в рамках курса RS Shcool - UI для поиска видео yotube с возможностью добавления в избранные профиля.",
-      technologies: "Angular,NgRx",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
-      deployUrl: "",
+    },
+    {
+      title: "golden-layout",
+      objective: "Create site",
+      description: "Website layout, non-adaptive",
+      technologies: "HTML,CSS,Javascript",
+      sourceCodeUrl: "https://github.com/crecker05ru/golden-layout2",
+      deployUrl: "https://crecker05ru.github.io/golden-layout2/",
       startedAt: "",
       completedAt: ""
-    },{
-      title: "bikeband-order-table-client ",
-      objective: "",
-      description: "",
-      technologies: "Vue, Quasar",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
-      deployUrl: "",
-      startedAt: "",
-      completedAt: ""
-    },{
-      title: "golden-layout2 ",
-      objective: "Создать прложения для совместных покупок и внтуренним чатом,изучить WebSockets",
-      description: "Проект написаный в рамках курса RS Shcool - UI для поиска видео yotube с возможностью добавления в избранные профиля.",
-      technologies: "Angular,NgRx",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
-      deployUrl: "",
-      startedAt: "",
-      completedAt: ""
-    },{
+    },
+    {
       title: "nextjs-nodejs-graphql-mysql-training ",
-      objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
-      description: "",
-      technologies: "React",
+      objective: "Learn GraphQL, interaction with GraphQL on the server and client",
+      description: "Standard package with server part",
+      technologies: "React/Next.JS,GraphQL,MySQL",
       deployUrl: "",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
+      sourceCodeUrl: "https://github.com/crecker05ru/nextjs-nodejs-graphql-mysql-training",
       startedAt: "",
       completedAt: ""
-    },{
+    },
+    {
       title: "magazine-stiled-blog",
-      objective: "Создать приложение для поиска рецептов с подробным описанием состава продуктов и их нутриентов",
-      description: "",
-      technologies: "React",
-      deployUrl: "",
-      sourceCodeUrl: "https://github.com/crecker05ru/che-gotovit",
+      objective: "Website layout",
+      description: "My first layout page, without any responsiveness or adaptation )",
+      technologies: "HTML,CSS",
+      deployUrl: "https://crecker05ru.github.io/magazine-stiled-blog/",
+      sourceCodeUrl: "https://github.com/crecker05ru/magazine-stiled-blog/tree/dev",
       startedAt: "",
       completedAt: ""
     },
