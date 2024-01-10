@@ -1,4 +1,5 @@
 <template>
+  <Transition name="back"  mode="out-in">
   <div class="default-layout" :class="[!isChecked ? 'light-theme' : 'dark-theme']">
     <AppGoogles :darkMode="isChecked"/>
   <header class="header">
@@ -68,6 +69,7 @@
     </div>
   </footer>
 </div>
+</Transition>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
@@ -106,7 +108,7 @@ const switchTheme = () => {
   flex-direction: column;
   height: 100%;
   color: var(--main-text-color);
-  transition: color ease 1s 1s;
+  // transition: color ease 1s 1s;
 
   // background-color: var(--main-background-color);
 
@@ -120,10 +122,12 @@ const switchTheme = () => {
   padding-top: 1rem;
   padding-bottom: 1rem;
   height: 80px;
+  // overflow-x: hidden;
+  // overflow-y: visible;
   // background-color: var(--header-background-color);
   // background: linear-gradient(to right ,var(--gradient-from-color),var(--gradient-to-color));
   color: var(--secondary-text-color);
-  transition: color ease 1s 1s;
+  // transition: color ease 1s 1s;
 
   // transition: all ease 0.5s 0.5s;
   // -webkit-transition: background 1s ease-out;  
@@ -132,8 +136,8 @@ const switchTheme = () => {
   //   transition: background 1s ease-out;
   // transition: --gradient-from-color 3s, --gradient-to-color 3s;
 
-  background: linear-gradient(to right, var(--myColor1), var(--myColor2));
-  transition: --myColor1 1s, --myColor2 1s;
+  // background: linear-gradient(to right, var(--myColor1), var(--myColor2));
+  // transition: --myColor1 1s, --myColor2 1s;
 
 //   &:hover {  
 //   --myColor1: #f00;
@@ -148,6 +152,7 @@ const switchTheme = () => {
     position: absolute;
     left: 1rem;
     top: 1rem;
+    z-index: 3;
     // width: 32px;
     // height: 22px;
     // background-color: rgb(110, 110, 110);
@@ -180,13 +185,18 @@ const switchTheme = () => {
   &__svg {
     width: 48px;
     height: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 24px 12px #ffffff99;
+    z-index: 5;
+
   }
 
 }
 .main {
   flex: 1 1 auto;
   min-height: calc(100svh - 160px);
-  background-color: var(--main-background-color);
+  // background-color: var(--main-background-color);
   transition: background-color ease 1s 1s;
 }
 .footer {
@@ -206,36 +216,96 @@ const switchTheme = () => {
 }
 
 .rotate-enter-active {
-  animation: rotate-in 1s;
+  animation: from-left linear 1s;
 }
 .rotate-leave-active {
-  animation: rotate-in 1s reverse;
+  animation: from-left  linear 1s reverse;
 }
-@keyframes rotate-in {
+.back-enter-active {
+  animation: night-day linear 0.5s;
+}
+.back-leave-active {
+  animation: night-day  linear 1s;
+}
+@keyframes translate-in {
   0% {
-    transform: translateY(-150%);
+    transform: translateX(5000%);
+    // right: -100%;
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
+    // right: 0;
+  }
+}
+@keyframes translate-out {
+  0% {
+    transform: translateX(0);
+    // right: -100%;
+  }
+  100% {
+    transform: translateX(5000%);
+    // right: 0;
+  }
+}
+@keyframes from-left {
+  0% {
+    transform: translateX(-200%);
+    // right: -100%;
+  }
+  100% {
+    transform: translateX(0);
+    // right: 0;
+  }
+}
+
+@keyframes day-night {
+  0% {
+    transform: translateX(-100%);
+    // right: -100%;
+  }
+  100% {
+    transform: translateX(0);
+    // right: 0;
+  }
+}
+@keyframes night-day {
+  0% {
+    transform: translateX(0);
+    // right: -100%;
+  }
+  100% {
+    transform: translateX(100%);
+    // right: 0;
   }
 }
 .dark-theme {
-
-   & .header__inner {
-    --myColor1: #1c2189;
-  --myColor2: #01032b;
-    background: linear-gradient(to right, var(--myColor1), var(--myColor2));
-  transition: --myColor1 1s 1s, --myColor2 1s 1s;
-   }
+  --myColor1: #1e2499;
+  --myColor2: #000442;
+  --myColor3: #000336;
+  --myColor4: #01032b;
+    background: linear-gradient(to right bottom, var(--myColor1), var(--myColor2),var(--myColor3),var(--myColor4));
+  transition: --myColor1 2s 0.5s, --myColor2 2s 0.5s, --myColor3 2s 0.5s, --myColor4 2s 0.5s;
+  animation: translate-out  linear 1s;
+  //  & .header__inner {
+  //   --myColor1: #1c2189;
+  // --myColor2: #01032b;
+  //   background: linear-gradient(to right, var(--myColor1), var(--myColor2));
+  // transition: --myColor1 1s 1s, --myColor2 1s 1s;
+  //  }
 }
 
 .light-theme {
   // --myColor1: #fff;
   //   --myColor2: #0691ff;
-   & .header__inner {
 
-      background: linear-gradient(to right, var(--myColor1), var(--myColor2));
-  transition: --myColor1 1s 1s, --myColor2 1s 1s;
-   }
+  background: linear-gradient(to right bottom, var(--myColor1), var(--myColor2),var(--myColor3),var(--myColor4));
+  // background: -webkit-radial-gradient(100% 30% ,120deg, var(--myColor1), var(--myColor2));
+  transition: --myColor1 2s 0.5s, --myColor2 2s 0.5s , --myColor3 2s 0.5s, --myColor4 2s 0.5s;
+  animation: translate-out  linear 1s;
+  //  & .header__inner {
+
+  //     background: linear-gradient(to right, var(--myColor1), var(--myColor2));
+  // transition: --myColor1 1s 1s, --myColor2 1s 1s;
+  //  }
 }
 </style>

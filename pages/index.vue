@@ -18,19 +18,17 @@
   </div>
       <address>
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.address }}:</span> <span class="my-cv__description-value">{{ currentCv.address }}</span></p>
-      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.email }}:</span> <span class="my-cv__description-value">{{ currentCv.contacts.email }}</span></p>
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.email }}:</span> <span class="my-cv__description-value"><a class="my-cv__description-link" :href="'mailto:' + currentCv.contacts.email.split(',')[0]" target="blank">{{ currentCv.contacts.email.split(',')[0] }}</a></span></p>
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.phone }}:</span> <span class="my-cv__description-value">{{ currentCv.contacts.phone}}</span></p>
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.telegram }}:</span> <span class="my-cv__description-value">{{ currentCv.contacts.telegram }}</span></p>
-      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.github }}:</span><span class="my-cv__description-value">{{ currentCv.contacts.gitHub }}</span></p>
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.github }}:</span><span class="my-cv__description-value"><a class="my-cv__description-link" :href="currentCv.contacts.gitHub" target="blank">{{ currentCv.contacts.gitHub }}</a></span></p>
       </address>
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.maritalStatus }}:</span> <span class="my-cv__description-value">{{ currentCv.maritalStatus }}</span></p>
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.dateOfBirth }}:</span> <span class="my-cv__description-value">{{ currentCv.dateOfBirth }}</span></p>
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.objective }}:</span> <span class="my-cv__description-value">{{ currentCv.objective }}</span></p>
-      <ul class="my-cv__list_column"><span class="my-cv__description-key">{{ currentDescription.education }}:</span> 
-        <li v-for="(ed,index ) in currentCv.education" :key="index">{{ ed }}</li>
-      </ul>
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.education }}:</span> <span class="my-cv__description-value">{{ currentCv.education[0] }}</span></p>
       <ul class="my-cv__list_column"><span class="my-cv__description-key">{{ currentDescription.workExperience }}:</span> 
-        <li v-for="(exper,index ) in currentCv.workExperience" :key="index">{{ exper }}</li>
+        <li class="my-cv__list-item" v-for="(exper,index ) in currentCv.workExperience" :key="index">{{ exper }}</li>
       </ul>
       <ul class="my-cv__list_row"><span class="my-cv__description-key">{{ currentDescription.skills }}:</span> 
         <li class="my-cv__skill-item" v-for="(skill,index ) in currentCv.skills" :key="index">{{ skill }}</li>
@@ -50,6 +48,7 @@
         <div><iframe :src="reposDeploys[String(repo.name)]" allow="fullscreen" style="border: none;" loading="lazy"></iframe></div>
       </li>
       </ul> -->
+      <div class="my-cv__my-repos"><span class="my-cv__description-key">{{ currentDescription.myRepos }}:<span>{{ repos?.length }}</span></span></div>
       <table class="my-cv__table repos-table">
         <thead class="repos-table__header">
           <tr class="repos-table__row">
@@ -68,12 +67,33 @@
         </tr>
         </tbody>
       </table>
+      <div class="my-cv__my-portfolio"><span class="my-cv__description-key">{{ currentDescription.portfolio }}:<span>{{ currentPortfolio.length }}</span></span></div>
+      <table class="my-cv__table portfolio-table">
+        <thead class="repos-table__header">
+          <tr class="repos-table__row">
+            <th class="repos-table__header-cell cell__name">{{ currentDescription.name }}</th>
+            <th class="repos-table__header-cell cell__language">{{ currentDescription.technologies }}</th>
+            <th class="repos-table__header-cell cell__description">{{ currentDescription.objective }}</th>
+            <th class="repos-table__header-cell cell__description">{{ currentDescription.description }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="repos-table__row" v-for="(portfolio,index ) in currentPortfolio" :key="index">
+          <td class="repos-table__cell cell__name"><a class="cell__link" :href="portfolio.sourceCodeUrl" target="blank">{{ portfolio.title }}</a></td>
+          <td class="repos-table__cell cell__name"><span class="cell__language-text" :class="portfolio.title" v-if="portfolio.technologies">{{ portfolio.technologies }}</span></td>
+          <!-- <td class="repos-table__cell cell__created" >{{ new Date(porfolio.title).toLocaleDateString() }}</td> -->
+          <td class="repos-table__cell cell__description">{{ portfolio.objective }}</td>
+          <td class="repos-table__cell cell__description">{{ portfolio.description }}</td>
+        </tr>
+        </tbody>
+      </table>
     </section>
   </div>
 </template>
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import myCv from '../assets/db/myCv'
+import {myPortfolio,myTestTasks, type Portfolio} from '../assets/db/myPortfolio'
 import type {Repos} from '../types/repos'
 import type {CV,CVInfo} from '../assets/db/myCv';
 const descriptionMap = {
@@ -96,7 +116,8 @@ const descriptionMap = {
         name: "Название",
         language: "Язык",
         createdAt: "Создан",
-        description: "Описание"
+        description: "Описание",
+        technologies: "Технологии"
 
     },
     "en":{
@@ -118,7 +139,8 @@ const descriptionMap = {
         name: "Name",
         language: "Language",
         createdAt: "Created at",
-        description: "Description"
+        description: "Description",
+        technologies: "Technologies"
 
     }
 }
@@ -137,6 +159,7 @@ const currentLanguage = ref("en")
   }
 const currentCv = computed<CVInfo>(() => myCv[currentLanguage.value as keyof CV])
 const currentDescription = computed(() => descriptionMap[currentLanguage.value as keyof typeof descriptionMap])
+const currentPortfolio = computed<Portfolio[]>(() => myPortfolio[currentLanguage.value as  keyof typeof descriptionMap])
 onMounted(() => {
   (async () => {
     // const resp = await fetch("https://api.github.com/users/crecker05ru/repos")
@@ -182,6 +205,13 @@ onMounted(() => {
 </script>
 <style lang="scss" scoped>
 .my-cv {
+  &__initials {
+    transition: color ease 1s 1s;
+  }
+  &__specialization {
+    margin-bottom: 12px;
+    transition: color ease 1s 1s;
+  }
   &__description-row {
     margin-bottom: 4px;
   }
@@ -190,6 +220,18 @@ onMounted(() => {
     color: var(--secondary-text-color);
     margin-right: 12px;
     transition: color ease 1s 1s;
+  }
+  &__description-value {
+    transition: color ease 1s 1s;
+  }
+  &__description-link {
+    width: fit-content;
+    border-radius: 4px;
+    transition: color,background-color 0.2s ease;
+    &:hover {
+      background-color: var(--link-hover-color);
+      color: var(--item-text-color);
+    }
   }
   &__section {
     margin-bottom: 3rem;
@@ -281,6 +323,7 @@ onMounted(() => {
       color: var(--item-text-color);
     }
   }
+  
 &__list {
   &_row {
   display: flex;
@@ -288,6 +331,7 @@ onMounted(() => {
   gap: 10px;
   margin-bottom: 2rem;
   }
+
   &_column {
   display: flex;
   flex-direction: column;
@@ -297,6 +341,9 @@ onMounted(() => {
 
   }
 }
+&__list-item {
+    transition: color ease 1s 1s;
+  }
 &__repos-item {
   display: flex;
   flex-wrap: wrap;
@@ -312,6 +359,12 @@ onMounted(() => {
     flex-direction: column;
     align-items: center;
   }
+}
+&__my-repos {
+  margin-bottom: 12px;
+}
+&__my-portfolio {
+  margin-bottom: 12px;
 }
 }
 .block {
@@ -330,10 +383,11 @@ onMounted(() => {
     background-color: var(--alternate-background-color);
   }
 }
-.repos-table {
+.repos-table, .portfolio-table {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 28px;
   &__row {
     display: flex;
     width: 100%;

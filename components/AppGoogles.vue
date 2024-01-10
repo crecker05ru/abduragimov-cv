@@ -53,7 +53,7 @@ photoGooglesEl.value.style.left = `${e.pageX - shiftX.value}px`
 .app-googles {
   &__photo-googles {
   position: absolute;
-  top: 255px;
+  top: 270px;
   left: 85px;
   cursor: pointer;
   z-index: 11;
@@ -61,6 +61,10 @@ photoGooglesEl.value.style.left = `${e.pageX - shiftX.value}px`
     left: 78px;
   }
   @media screen and (max-width: $mobile) {
+    left: 70px;
+  }
+  @media screen and (max-width: 340px) {
+    top: 310px;
     left: 70px;
   }
 }
