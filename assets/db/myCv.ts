@@ -34,7 +34,7 @@ const myCv: CV = {
     address: "Махачкала, 367000, Россия",
     profilePhoto: "images/profilephoto.jpg",
     contacts: {
-      email: "abduragimovdev@gmail.com, fort2652@gmail.com",
+      email: "anvarabduragimovdev@gmail.com, fort2652@gmail.com",
       phone: "+79884586930, +79387803265",
       telegram: "ankaboot05",
       gitHub: "https://github.com/crecker05ru"
@@ -88,7 +88,7 @@ Frontend-разработчик
     address: "Makhachkala, 367000, Russia",
     profilePhoto: "images/profilephoto.jpg",
     contacts: {
-      email: "abduragimovdev@gmail.com, fort2652@gmail.com",
+      email: "anvarabduragimovdev@gmail.com, fort2652@gmail.com",
       phone: "+79884586930, +79387803265",
       telegram: "ankaboot05",
       gitHub: "https://github.com/crecker05ru"
