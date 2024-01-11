@@ -48,8 +48,50 @@
         <div><iframe :src="reposDeploys[String(repo.name)]" allow="fullscreen" style="border: none;" loading="lazy"></iframe></div>
       </li>
       </ul> -->
-      <div class="my-cv__my-repos"><span class="my-cv__description-key">{{ currentDescription.myRepos }}:<span>{{ repos?.length }}</span></span></div>
-      <table class="my-cv__table repos-table">
+      <div class="my-cv__my-portfolio"><span class="my-cv__description-key">{{ currentDescription.portfolio }}:<span>{{ currentPortfolio.length }}</span></span></div>
+      <table class="my-cv__table portfolio-table">
+        <thead class="portfolio-table__header">
+          <tr class="portfolio-table__row">
+            <th class="portfolio-table__header-cell cell__text">{{ currentDescription.name }}</th>
+            <th class="portfolio-table__header-cell cell__text">{{ currentDescription.technologies }}</th>
+            <th class="portfolio-table__header-cell cell__description">{{ currentDescription.objective }}</th>
+            <th class="portfolio-table__header-cell cell__description">{{ currentDescription.description }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="portfolio-table__row" v-for="(portfolio,index ) in currentPortfolio" :key="index">
+          <td class="portfolio-table__cell cell__default"><a class="cell__link" :href="portfolio.sourceCodeUrl" target="blank">{{ portfolio.title }}</a></td>
+          <td class="portfolio-table__cell cell__default word-break">{{ portfolio.technologies }}</td>
+          <!-- <td class="portfolio-table__cell cell__created" >{{ new Date(porfolio.title).toLocaleDateString() }}</td> -->
+          <td class="portfolio-table__cell cell__default">{{ portfolio.objective }}</td>
+          <td class="portfolio-table__cell cell__default">{{ portfolio.description }}</td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="my-cv__test-tasks"><span class="my-cv__description-key">{{ currentDescription.testTasks }}:<span>{{ currentTestTasks?.length }}</span></span></div>
+      <table class="my-cv__table test-tasks">
+        <thead class="test-tasks__header">
+          <tr class="test-tasks__row">
+            <th class="test-tasks__header-cell cell__text">{{ currentDescription.name }}</th>
+            <th class="test-tasks__header-cell cell__text">{{ currentDescription.technologies }}</th>
+            <th class="test-tasks__header-cell cell__description">{{ currentDescription.objective }}</th>
+            <th class="test-tasks__header-cell cell__description">{{ currentDescription.description }}</th>
+            <th class="portfolio-table__header-cell cell__description">{{ currentDescription.feedback }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="test-tasks__row" v-for="(testTask,index ) in currentTestTasks" :key="index">
+          <td class="test-tasks__cell cell__default"><a class="cell__link" :href="testTask.sourceCodeUrl" target="blank">{{ testTask.title }}</a></td>
+          <td class="test-tasks__cell cell__default word-break">{{ testTask.technologies }}</td>
+          <!-- <td class="test-tasks__cell cell__created" >{{ new Date(porfolio.title).toLocaleDateString() }}</td> -->
+          <td class="test-tasks__cell cell__default">{{ testTask.objective }}</td>
+          <td class="test-tasks__cell cell__default">{{ testTask.description }}</td>
+          <td class="test-tasks__cell cell__default">{{ testTask.feedback }}</td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="my-cv__my-repos" @click="switchReposTable"><span class="my-cv__description-key">{{ currentDescription.myRepos }}:<span>{{ repos?.length }}</span></span></div>
+      <table class="my-cv__table repos-table" v-show="isReposOpened" >
         <thead class="repos-table__header">
           <tr class="repos-table__row">
             <th class="repos-table__header-cell cell__name">{{ currentDescription.name }}</th>
@@ -67,33 +109,14 @@
         </tr>
         </tbody>
       </table>
-      <div class="my-cv__my-portfolio"><span class="my-cv__description-key">{{ currentDescription.portfolio }}:<span>{{ currentPortfolio.length }}</span></span></div>
-      <table class="my-cv__table portfolio-table">
-        <thead class="repos-table__header">
-          <tr class="repos-table__row">
-            <th class="repos-table__header-cell cell__name">{{ currentDescription.name }}</th>
-            <th class="repos-table__header-cell cell__language">{{ currentDescription.technologies }}</th>
-            <th class="repos-table__header-cell cell__description">{{ currentDescription.objective }}</th>
-            <th class="repos-table__header-cell cell__description">{{ currentDescription.description }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="repos-table__row" v-for="(portfolio,index ) in currentPortfolio" :key="index">
-          <td class="repos-table__cell cell__name"><a class="cell__link" :href="portfolio.sourceCodeUrl" target="blank">{{ portfolio.title }}</a></td>
-          <td class="repos-table__cell cell__name"><span class="cell__language-text" :class="portfolio.title" v-if="portfolio.technologies">{{ portfolio.technologies }}</span></td>
-          <!-- <td class="repos-table__cell cell__created" >{{ new Date(porfolio.title).toLocaleDateString() }}</td> -->
-          <td class="repos-table__cell cell__description">{{ portfolio.objective }}</td>
-          <td class="repos-table__cell cell__description">{{ portfolio.description }}</td>
-        </tr>
-        </tbody>
-      </table>
+
     </section>
   </div>
 </template>
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import myCv from '../assets/db/myCv'
-import {myPortfolio,myTestTasks, type Portfolio} from '../assets/db/myPortfolio'
+import {myPortfolio,myTestTasks, type Portfolio, type TestTask} from '../assets/db/myPortfolio'
 import type {Repos} from '../types/repos'
 import type {CV,CVInfo} from '../assets/db/myCv';
 const descriptionMap = {
@@ -117,7 +140,15 @@ const descriptionMap = {
         language: "Язык",
         createdAt: "Создан",
         description: "Описание",
-        technologies: "Технологии"
+        technologies: "Технологии",
+        testTasks: "Тестовые задания",
+        feedback: "Отзыв",
+        commentary: "Комментарий",
+        technicalTask: "Техническое задание",
+        completed: "Завершен",
+        image: "Изображение",
+        difficulty: "Сложность",
+        involvementRating: "Рейтинг вовлеченности"
 
     },
     "en":{
@@ -140,7 +171,15 @@ const descriptionMap = {
         language: "Language",
         createdAt: "Created at",
         description: "Description",
-        technologies: "Technologies"
+        technologies: "Technologies",
+        testTasks: "Test tasks",
+        feedback: "Feedback",
+        commentary: "Commentary",
+        technicalTask: "Technical task",
+        completed: "Completed",
+        image: "Image",
+        difficulty: "Difficulty",
+        involvementRating: "Involvement Rating"
 
     }
 }
@@ -148,6 +187,7 @@ const repos = ref<Repos[]>()
 const reposDeploys: {[key: string]: any} = {}
 const currentLanguage = ref("en")
   const languageCheckbox = ref(false)
+const isReposOpened = ref(false)
   const switchLanguage = () => {
     console.log(currentLanguage.value,"currentLanguage.value")
     if(currentLanguage.value === "en") {
@@ -160,6 +200,8 @@ const currentLanguage = ref("en")
 const currentCv = computed<CVInfo>(() => myCv[currentLanguage.value as keyof CV])
 const currentDescription = computed(() => descriptionMap[currentLanguage.value as keyof typeof descriptionMap])
 const currentPortfolio = computed<Portfolio[]>(() => myPortfolio[currentLanguage.value as  keyof typeof descriptionMap])
+const currentTestTasks = computed<TestTask[]>(() => myTestTasks[currentLanguage.value as  keyof typeof descriptionMap])
+const switchReposTable = () => isReposOpened.value = !isReposOpened.value
 onMounted(() => {
   (async () => {
     // const resp = await fetch("https://api.github.com/users/crecker05ru/repos")
@@ -362,8 +404,22 @@ onMounted(() => {
 }
 &__my-repos {
   margin-bottom: 12px;
+  padding: 4px;
+  cursor: pointer;
+  transition: color 0.2s linear;
+  width: fit-content;
+  transition:  color, background-color 0.2s linear;
+  border-radius: 4px;
+  &:hover {
+   color: var(--item-text-color);
+   background-color: var(--item-background-color);
+  }
+
 }
 &__my-portfolio {
+  margin-bottom: 12px;
+}
+&__test-tasks {
   margin-bottom: 12px;
 }
 }
@@ -383,7 +439,7 @@ onMounted(() => {
     background-color: var(--alternate-background-color);
   }
 }
-.repos-table, .portfolio-table {
+.repos-table, .portfolio-table,.test-tasks {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -396,10 +452,12 @@ onMounted(() => {
   }
   &__cell,&__header-cell {
     display: block;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 8px;
     flex: 1 1 auto;
     min-width: 20px;
     max-width: 24%;
-    overflow: hidden;
     @media screen and (max-width: $tablet) {
       min-width: 60px;
       font-size: 13px;
@@ -414,7 +472,33 @@ onMounted(() => {
     // }
   }
 }
+.test-tasks {
+  &__cell {
+    max-width: 20%;
+  }
+}
 .cell {
+  &__default {
+    min-width: 120px;
+    transition: color ease 1s 1s;
+    @media screen and (max-width: $tablet) {
+      min-width: 700px;
+    }
+    @media screen and (max-width: $mobile) {
+      min-width: 40px;
+    }
+  }
+  &__text {    
+    min-width: 120px;
+    transition: color ease 1s 1s;
+
+    @media screen and (max-width: $tablet) {
+      min-width: 700px;
+    }
+    @media screen and (max-width: $mobile) {
+      min-width: 40px;
+    }
+  }
   &__name {
     min-width: 160px;
     transition: color ease 1s 1s;
@@ -465,17 +549,20 @@ transition: color ease 1s 1s;
     display: block;
     padding: 2px 4px;
     max-width: 80%;
+    width: fit-content;
     // transition: color ease 1s 1s;
     border-radius: 4px;
+        text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: color, background-color 0.2s ease;
     &:hover {
       background-color: var(--link-hover-color);
       color: var(--item-text-color);
     }
 
     // width:200px;
-    // text-overflow: ellipsis;
-    // overflow: hidden;
-    // white-space: nowrap;
+
 
     // min-width: 20%;
     // max-width: 24%;
@@ -485,5 +572,9 @@ transition: color ease 1s 1s;
     //   -webkit-box-orient: vertical;
     // }
   }
+}
+.word-break {
+  word-break: break-all;
+
 }
 </style>

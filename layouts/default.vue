@@ -1,6 +1,7 @@
 <template>
   <Transition name="back"  mode="out-in">
   <div class="default-layout" :class="[!isChecked ? 'light-theme' : 'dark-theme']">
+
     <AppGoogles :darkMode="isChecked"/>
   <header class="header">
 <div class="header__inner">
@@ -70,6 +71,19 @@
   </footer>
 </div>
 </Transition>
+<!-- <svg class="stars-svg" xmlns="http://www.w.org/2000/svg" :class="[!isChecked ? 'stars-svg__day' : 'stars-svg__night']">
+      <filter id="filter">
+        <feTurbulence baseFrequency=".2" seed="1"/>
+        <feColorMatrix 
+        values = 
+        "0 0 0 5 -3
+        0 0 0 5 -3
+        0 0 0 5 -3
+        0 0 0 0 1"
+        />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#filter)"/>
+    </svg> -->
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
@@ -104,13 +118,11 @@ const switchTheme = () => {
   background: var(--scrollbar-thumb-hover-color);
 }
 .default-layout {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
   color: var(--main-text-color);
-  // transition: color ease 1s 1s;
-
-  // background-color: var(--main-background-color);
 
 }
 
@@ -122,27 +134,8 @@ const switchTheme = () => {
   padding-top: 1rem;
   padding-bottom: 1rem;
   height: 80px;
-  // overflow-x: hidden;
-  // overflow-y: visible;
-  // background-color: var(--header-background-color);
-  // background: linear-gradient(to right ,var(--gradient-from-color),var(--gradient-to-color));
+
   color: var(--secondary-text-color);
-  // transition: color ease 1s 1s;
-
-  // transition: all ease 0.5s 0.5s;
-  // -webkit-transition: background 1s ease-out;  
-  //   -moz-transition: background 1s ease-out;  
-  //   -o-transition: background 1s ease-out;  
-  //   transition: background 1s ease-out;
-  // transition: --gradient-from-color 3s, --gradient-to-color 3s;
-
-  // background: linear-gradient(to right, var(--myColor1), var(--myColor2));
-  // transition: --myColor1 1s, --myColor2 1s;
-
-//   &:hover {  
-//   --myColor1: #f00;
-//   --myColor2: yellow;
-// }
   }
   &__text {
     transition: color ease 1s 1s;
@@ -153,29 +146,9 @@ const switchTheme = () => {
     left: 1rem;
     top: 1rem;
     z-index: 3;
-    // width: 32px;
-    // height: 22px;
-    // background-color: rgb(110, 110, 110);
-    // border-radius: 12px;
+
   }
-  // &__switch-checked {
-  //   background-color: #c7c7c7;
-  //   & .header__switch-span{
-  //     transform: translate(100%,0);
-  //     background-color: #0691ff;
-  //   }
-  // }
-  // &__switch-span { 
-  //   display: block;
-  //   position: absolute;
-  //   left: 0;
-  //   top: 2px;
-  //   background-color: #fff;
-  //   border-radius: 50%;
-  //   width: 17px;
-  //   height: 17px;
-  //   z-index: 1;
-  // }
+
   &__switch-input {
     width: 0;
     height: 0;
@@ -279,33 +252,35 @@ const switchTheme = () => {
   }
 }
 .dark-theme {
-  --myColor1: #1e2499;
-  --myColor2: #000442;
-  --myColor3: #000336;
-  --myColor4: #01032b;
-    background: linear-gradient(to right bottom, var(--myColor1), var(--myColor2),var(--myColor3),var(--myColor4));
+  --myColor1: #1e2499dd;
+  --myColor2: #00044299;
+  --myColor3: #00033633;
+  --myColor4: #01032b22;
+    background: linear-gradient(to right bottom, var(--myColor1), var(--myColor2),var(--myColor3),var(--myColor4)), url('../assets/svg/starry-night.svg');
   transition: --myColor1 2s 0.5s, --myColor2 2s 0.5s, --myColor3 2s 0.5s, --myColor4 2s 0.5s;
   animation: translate-out  linear 1s;
-  //  & .header__inner {
-  //   --myColor1: #1c2189;
-  // --myColor2: #01032b;
-  //   background: linear-gradient(to right, var(--myColor1), var(--myColor2));
-  // transition: --myColor1 1s 1s, --myColor2 1s 1s;
-  //  }
 }
 
 .light-theme {
-  // --myColor1: #fff;
-  //   --myColor2: #0691ff;
-
-  background: linear-gradient(to right bottom, var(--myColor1), var(--myColor2),var(--myColor3),var(--myColor4));
-  // background: -webkit-radial-gradient(100% 30% ,120deg, var(--myColor1), var(--myColor2));
+  background: linear-gradient(to right bottom, var(--myColor1), var(--myColor2),var(--myColor3),var(--myColor4)), url('../assets/svg/starry-night.svg');
   transition: --myColor1 2s 0.5s, --myColor2 2s 0.5s , --myColor3 2s 0.5s, --myColor4 2s 0.5s;
   animation: translate-out  linear 1s;
-  //  & .header__inner {
-
-  //     background: linear-gradient(to right, var(--myColor1), var(--myColor2));
-  // transition: --myColor1 1s 1s, --myColor2 1s 1s;
-  //  }
+}
+.stars-svg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 0;
+  &__day {
+    opacity: 0;
+  }
+  &__night {
+    opacity: 1;
+  }
 }
 </style>
