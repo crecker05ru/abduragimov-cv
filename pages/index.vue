@@ -482,7 +482,7 @@ onMounted(() => {
     min-width: 120px;
     transition: color ease 1s 1s;
     @media screen and (max-width: $tablet) {
-      min-width: 700px;
+      min-width: 70px;
     }
     @media screen and (max-width: $mobile) {
       min-width: 40px;
@@ -493,7 +493,7 @@ onMounted(() => {
     transition: color ease 1s 1s;
 
     @media screen and (max-width: $tablet) {
-      min-width: 700px;
+      min-width: 70px;
     }
     @media screen and (max-width: $mobile) {
       min-width: 40px;

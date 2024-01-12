@@ -1,15 +1,15 @@
 <template>
   <Transition name="back"  mode="out-in">
-  <div class="default-layout" :class="[!isChecked ? 'light-theme' : 'dark-theme']">
+  <div class="default-layout" :class="[isLightTheme ? 'light-theme' : 'dark-theme']">
 
-    <AppGoogles :darkMode="isChecked"/>
+    <AppGoogles :darkMode="!isLightTheme"/>
   <header class="header">
 <div class="header__inner">
 
   <p class="header__text">My CV</p>
-  <label class="header__switch" :class="{'header__switch-checked': isChecked}">
+  <label class="header__switch" :class="{'header__switch-checked': !isLightTheme}">
     <Transition name="rotate"  mode="out-in">
-    <svg v-if="!isChecked" class="header__sun-svg header__svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+    <svg v-if="isLightTheme" class="header__sun-svg header__svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 111.69 111.69" xml:space="preserve">
 <g id="sun">
 	<g>
@@ -24,7 +24,7 @@
 	</g>
 </g>
 </svg>
-    <svg v-else-if="isChecked" class="header__moon-svg header__svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+    <svg v-else-if="!isLightTheme" class="header__moon-svg header__svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
 
 <circle cx="100" cy="100" r="94.147" fill="#e4e2dc"/>
 
@@ -91,9 +91,32 @@ import { ref } from 'vue';
 const isLightTheme = ref(true)
 const isChecked = ref(false)
 const language = ref("en")
+// const saveTheme = () => {
+//   localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
+// }
 const switchTheme = () => {
   isLightTheme.value = !isLightTheme.value
+  localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
 }
+
+onMounted(() => {
+  window.addEventListener("beforeunload", () => {
+    localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
+  });
+  const isLight = JSON.parse(localStorage.getItem('cv-theme') || "" )
+  setTimeout(() => {
+  isLightTheme.value = Boolean(isLight)
+  }, 20);
+  console.log('isTheme',isLight,isLightTheme.value)
+  window.addEventListener("beforeunload", () => {
+    localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
+  });
+})
+onBeforeUnmount(() => {
+  // window.addEventListener("beforeunload", () => {
+  //   localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
+  // });
+})
 </script>
 <style lang="scss">
 
