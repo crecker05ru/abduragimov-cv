@@ -49,14 +49,6 @@
 
     <input class="header__switch-input" type="checkbox" @click="switchTheme" v-model="isChecked" />
   </label>
-  <!-- <div>
-    <span>Language</span>
-    <label class="header__switch" :class="{'header__switch-checked': language === 'ru'}">
-    <span class="header__switch-span"></span>
-    <input class="header__switch-input" type="checkbox" @click="switchTheme" v-model="language" />
-  </label>
-  </div> -->
-
 </div>
   </header>
   <main class="main">
@@ -71,19 +63,6 @@
   </footer>
 </div>
 </Transition>
-<!-- <svg class="stars-svg" xmlns="http://www.w.org/2000/svg" :class="[!isChecked ? 'stars-svg__day' : 'stars-svg__night']">
-      <filter id="filter">
-        <feTurbulence baseFrequency=".2" seed="1"/>
-        <feColorMatrix 
-        values = 
-        "0 0 0 5 -3
-        0 0 0 5 -3
-        0 0 0 5 -3
-        0 0 0 0 1"
-        />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#filter)"/>
-    </svg> -->
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
@@ -91,9 +70,7 @@ import { ref } from 'vue';
 const isLightTheme = ref(true)
 const isChecked = ref(false)
 const language = ref("en")
-// const saveTheme = () => {
-//   localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
-// }
+
 const switchTheme = () => {
   isLightTheme.value = !isLightTheme.value
   localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
@@ -111,11 +88,6 @@ onMounted(() => {
   window.addEventListener("beforeunload", () => {
     localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
   });
-})
-onBeforeUnmount(() => {
-  // window.addEventListener("beforeunload", () => {
-  //   localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
-  // });
 })
 </script>
 <style lang="scss">
@@ -192,7 +164,6 @@ onBeforeUnmount(() => {
 .main {
   flex: 1 1 auto;
   min-height: calc(100svh - 160px);
-  // background-color: var(--main-background-color);
   transition: background-color ease 1s 1s;
 }
 .footer {
@@ -226,52 +197,42 @@ onBeforeUnmount(() => {
 @keyframes translate-in {
   0% {
     transform: translateX(5000%);
-    // right: -100%;
   }
   100% {
     transform: translateX(0);
-    // right: 0;
   }
 }
 @keyframes translate-out {
   0% {
     transform: translateX(0);
-    // right: -100%;
   }
   100% {
     transform: translateX(5000%);
-    // right: 0;
   }
 }
 @keyframes from-left {
   0% {
     transform: translateX(-200%);
-    // right: -100%;
   }
   100% {
     transform: translateX(0);
-    // right: 0;
   }
 }
 
 @keyframes day-night {
   0% {
     transform: translateX(-100%);
-    // right: -100%;
   }
   100% {
     transform: translateX(0);
-    // right: 0;
   }
 }
 @keyframes night-day {
   0% {
     transform: translateX(0);
-    // right: -100%;
   }
   100% {
     transform: translateX(100%);
-    // right: 0;
   }
 }
 .dark-theme {

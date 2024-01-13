@@ -25,8 +25,6 @@ emit('close-modal')
   position: fixed;
   top: 0;
   left: 0;
-  // bottom: 0;
-  // right: 0;
   width: 100%;
   height: 100%;
   background-color: #00000009;
@@ -41,15 +39,9 @@ emit('close-modal')
   }
   &__inner {
     padding: 16px;
-    // position: fixed;
-    // top: 30%;
-    // left: 0;
-    // right: 0;
     min-width: 720px;
     margin-left: auto;
     margin-right: auto;
-    // width: 100%;
-    // height: 100%;
     max-width: 980px;
     background-color: #fff;
     border-radius: 8px;

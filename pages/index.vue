@@ -40,15 +40,6 @@
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.aboutMe }}:</span> <span class="my-cv__description-value">{{ currentCv.aboutMe }}</span></p>
     </section>
     <section class="my-cv__section">
-      <!-- <iframe src="https://crecker05ru.github.io/halva/"></iframe> -->
-      <!-- <ul class="my-cv__list_column"><span class="my-cv__description-key">{{ currentDescription.myRepos }}:<span>{{ repos?.length }}</span></span> 
-        <li class="my-cv__repos-item"  v-for="(repo,index ) in repos" :key="index">
-          <div class="my-cv__item-inner">
-          <span class="my-cv__description-key">{{ currentDescription.name }}</span><span class="my-cv__description-value block__primal"><a :href="repo.html_url" target="blank">{{ repo.name }}</a></span> <span class="my-cv__description-key">{{ currentDescription.language }}</span><span class="my-cv__description-value block__secondary">{{ repo.language }}</span> <span class="my-cv__description-key">{{ currentDescription.createdAt }}</span> <span class="my-cv__description-value block__alternate">{{ new Date(repo.created_at).toLocaleDateString() }}</span>
-        </div>
-        <div><iframe :src="reposDeploys[String(repo.name)]" allow="fullscreen" style="border: none;" loading="lazy"></iframe></div>
-      </li>
-      </ul> -->
       <div class="my-cv__my-portfolio"><span class="my-cv__description-key">{{ currentDescription.portfolio }}:<span>{{ currentPortfolio.length }}</span></span></div>
       <table class="my-cv__table portfolio-table">
         <thead class="portfolio-table__header">
@@ -61,9 +52,8 @@
         </thead>
         <tbody>
           <tr class="portfolio-table__row" v-for="(portfolio,index ) in currentPortfolio" :key="index">
-          <td class="portfolio-table__cell cell__default"><a class="cell__link" :href="portfolio.sourceCodeUrl" target="blank">{{ portfolio.title }}</a></td>
+          <td class="portfolio-table__cell cell__default"><a class="cell__link" :href="portfolio.deployUrl" target="blank">{{ portfolio.title }}</a></td>
           <td class="portfolio-table__cell cell__default word-break">{{ portfolio.technologies }}</td>
-          <!-- <td class="portfolio-table__cell cell__created" >{{ new Date(porfolio.title).toLocaleDateString() }}</td> -->
           <td class="portfolio-table__cell cell__default">{{ portfolio.objective }}</td>
           <td class="portfolio-table__cell cell__default">{{ portfolio.description }}</td>
         </tr>
@@ -87,7 +77,6 @@
             <app-modal :isOpened="currentTestTask === testTask.githubTitle" @close-modal="handleCloseModal"><app-frame :source=testTask.deployUrl></app-frame></app-modal>
           </td>
           <td class="test-tasks__cell cell__default word-break">{{ testTask.technologies }}</td>
-          <!-- <td class="test-tasks__cell cell__created" >{{ new Date(porfolio.title).toLocaleDateString() }}</td> -->
           <td class="test-tasks__cell cell__default">{{ testTask.objective }}</td>
           <td class="test-tasks__cell cell__default">{{ testTask.description }}</td>
           <td class="test-tasks__cell cell__default">{{ testTask.feedback }}</td>
@@ -201,7 +190,6 @@ const currentTestTask = ref("")
     }else {
       currentLanguage.value = "en"
     }
-    // language.value === "en" ? language.value = "ru" : language.value = "en"
   }
 const currentCv = computed<CVInfo>(() => myCv[currentLanguage.value as keyof CV])
 const currentDescription = computed(() => descriptionMap[currentLanguage.value as keyof typeof descriptionMap])
@@ -232,13 +220,7 @@ useHead({
 onMounted(() => {
   (async () => {
     // const resp = await fetch("https://api.github.com/users/crecker05ru/repos")
-    // console.log(resp)
-    // const body = await resp.json()
-    // repos.value = body
-    // console.log(body)
     // const resp1 = await fetch("https://api.github.com/repos/crecker05ru/abduragimov-cv")
-    // const body1 = await resp1.json()
-    // console.log(body1)
     // const resp1 = await fetch("https://api.github.com/repos/crecker05ru/abduragimov-cv/stats/code_frequency")
     const reposData = localStorage.getItem("reposData")
     const updatedData = localStorage.getItem("updatedDate")
@@ -252,7 +234,6 @@ onMounted(() => {
       repos.value = JSON.parse(reposData) as Repos[]
     }else {
     const resp = await fetch("https://api.github.com/users/crecker05ru/repos?sort=created&direction=desc&per_page=100")
-    // const resp = await fetch("https://api.github.com/users/crecker05ru/repos")
     console.log(resp)
     const body = await resp.json()
     repos.value = body
@@ -307,9 +288,6 @@ const isModalOpened = ref(false)
   &__section {
     margin-bottom: 3rem;
   }
-  // &__language-switch {
-  //   display: absolute;
-  // }
   &__switch {
     display: block;
     position: relative;
@@ -495,10 +473,6 @@ const isModalOpened = ref(false)
       min-width: 40px;
       font-size: 12px;
   }
-    // & > a{
-    //   max-width: 100%;
-    //   overflow: hidden;
-    // }
   }
 }
 .test-tasks {
@@ -548,11 +522,8 @@ const isModalOpened = ref(false)
     width: fit-content;
     text-align: center;
     padding: 2px 4px;
-    // background-color:#000000;
-    // color: var(--item-text-color);
     border-radius: 4px;
     filter: brightness(1.3);
-    // transition: color ease 1s 1s;
   }
   &__created {
 max-width: 100px;
@@ -570,16 +541,10 @@ transition: color ease 1s 1s;
     }
   }
   &__link {
-    // display: inline-block;
-    // width: 100%;
-    // max-width: 160px;
-    // overflow: hidden;
-    // text-overflow: clip;
     display: block;
     padding: 2px 4px;
     max-width: 80%;
     width: fit-content;
-    // transition: color ease 1s 1s;
     border-radius: 4px;
         text-overflow: ellipsis;
     overflow: hidden;
@@ -591,16 +556,6 @@ transition: color ease 1s 1s;
       color: var(--item-text-color);
     }
 
-    // width:200px;
-
-
-    // min-width: 20%;
-    // max-width: 24%;
-    // @supports (-webkit-line-clamp: 1) {
-    //   display: -webkit-box;
-    //   -webkit-line-clamp: 1;
-    //   -webkit-box-orient: vertical;
-    // }
   }
 }
 .word-break {

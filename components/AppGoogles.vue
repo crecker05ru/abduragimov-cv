@@ -69,11 +69,7 @@ photoGooglesEl.value.style.left = `${e.pageX - shiftX.value}px`
   }
 }
 &__googles-svg {
-  // position: absolute;
-  // top: 110px;
-  // left: 55px;
   width: 90px;
-  // height: 1rem;
 }
 }
 .night-glasses {
