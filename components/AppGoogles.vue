@@ -56,7 +56,7 @@ photoGooglesEl.value.style.left = `${e.pageX - shiftX.value}px`
   top: 270px;
   left: 85px;
   cursor: pointer;
-  z-index: 11;
+  z-index: 5;
   @media screen and (max-width: $tablet) {
     left: 78px;
   }

@@ -1,8 +1,9 @@
 <template>
+  
   <div class="my-cv wrapper">
     <header class="my-cv__header">
       <h1 class="my-cv__initials">{{ currentCv.initials }}</h1>
-      <h2 class="my-cv__specialization"> {{ currentCv.specialization }}</h2>
+      <h2 class="my-cv__specialization" > {{ currentCv.specialization }}</h2>
       <div class="my-cv__photo">
 
       <img class="my-cv__profile-photo" alt="Profile photo" :src="currentCv.profilePhoto"/>
@@ -81,7 +82,10 @@
         </thead>
         <tbody>
           <tr class="test-tasks__row" v-for="(testTask,index ) in currentTestTasks" :key="index">
-          <td class="test-tasks__cell cell__default"><a class="cell__link" :href="testTask.sourceCodeUrl" target="blank">{{ testTask.title }}</a></td>
+          <td class="test-tasks__cell cell__default">
+            <span class="cell__link" @click="handleOpenModal(testTask.githubTitle)" target="blank">{{ testTask.title }}</span>
+            <app-modal :isOpened="currentTestTask === testTask.githubTitle" @close-modal="handleCloseModal"><app-frame :source=testTask.deployUrl></app-frame></app-modal>
+          </td>
           <td class="test-tasks__cell cell__default word-break">{{ testTask.technologies }}</td>
           <!-- <td class="test-tasks__cell cell__created" >{{ new Date(porfolio.title).toLocaleDateString() }}</td> -->
           <td class="test-tasks__cell cell__default">{{ testTask.objective }}</td>
@@ -188,6 +192,8 @@ const reposDeploys: {[key: string]: any} = {}
 const currentLanguage = ref("en")
   const languageCheckbox = ref(false)
 const isReposOpened = ref(false)
+const isOverflowed = ref(false)
+const currentTestTask = ref("")
   const switchLanguage = () => {
     console.log(currentLanguage.value,"currentLanguage.value")
     if(currentLanguage.value === "en") {
@@ -202,6 +208,27 @@ const currentDescription = computed(() => descriptionMap[currentLanguage.value a
 const currentPortfolio = computed<Portfolio[]>(() => myPortfolio[currentLanguage.value as  keyof typeof descriptionMap])
 const currentTestTasks = computed<TestTask[]>(() => myTestTasks[currentLanguage.value as  keyof typeof descriptionMap])
 const switchReposTable = () => isReposOpened.value = !isReposOpened.value
+
+const handleOpenModal = (task: string) => {
+ isModalOpened.value = true
+ isOverflowed.value = true
+ document.body.classList.add("body-scroll-disable")
+ currentTestTask.value = task
+}
+
+const handleCloseModal = () => {
+  isModalOpened.value = false
+  isOverflowed.value = false
+  document.body.classList.remove("body-scroll-disable")
+  currentTestTask.value = ""
+}
+useHead({
+  bodyAttrs: {
+    class: {
+      "body-scroll-disable": isOverflowed.value
+    }
+  }
+})
 onMounted(() => {
   (async () => {
     // const resp = await fetch("https://api.github.com/users/crecker05ru/repos")
@@ -244,6 +271,8 @@ onMounted(() => {
       })
   })()
 })
+
+const isModalOpened = ref(false)
 </script>
 <style lang="scss" scoped>
 .my-cv {
@@ -556,6 +585,7 @@ transition: color ease 1s 1s;
     overflow: hidden;
     white-space: nowrap;
     transition: color, background-color 0.2s ease;
+    cursor: pointer;
     &:hover {
       background-color: var(--link-hover-color);
       color: var(--item-text-color);

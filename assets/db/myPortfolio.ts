@@ -20,7 +20,7 @@ export enum Difficulties {
 }
 export interface TestTask {
   title: string
-  githubTitle?: string
+  githubTitle: string
   objective?: string
   description?: string
   technologies?: string
@@ -400,7 +400,7 @@ export const myTestTasks: MyTestTasks =
     startedAt: "2023-12-21",
     completedAt: "2023-12-26",
     commentary: "",
-    feedback: "К сожалению, на данный момент мы не готовы пригласить Вас на собеседование.",
+    feedback: `Ответ от тимлида: "сумбур в коде и структуре, остатки старого/ненужного кода, логика и типы/интерфейсы в страницах, дальше в общем-то не смотрел. Посоветовал бы быть внимательней, стараться писать более красивый и структурированный код, ну и почитать больше книжке по программированию, начать с базы - "Чистый код" и "Чистая архитектура" Роберта Мартина`,
     isCompleted: true,
     image: "",
     difficulty: Difficulties.Medium,
@@ -775,7 +775,7 @@ export const myTestTasks: MyTestTasks =
       sourceCodeUrl: "https://github.com/crecker05ru/test-webtronics-quasar",
       startedAt: "2023-12-21",
       completedAt: "2023-12-26",
-      commentary: "",
+      commentary: `Answer from the team lead: “confusion in the code and structure, remnants of old/unnecessary code, logic and types/interfaces in the pages, in general, I didn’t look further. I would advise you to be more careful, try to write more beautiful and structured code, and read more book on programming, start with the basics - “Clean Code” and “Clean Architecture” by Robert Martin`,
       feedback: "Unfortunately, at the moment we are not ready to invite you for an interview.",
       isCompleted: true,
       image: "",
