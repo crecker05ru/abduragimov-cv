@@ -67,7 +67,7 @@
             <th class="test-tasks__header-cell cell__text">{{ currentDescription.technologies }}</th>
             <th class="test-tasks__header-cell cell__description">{{ currentDescription.objective }}</th>
             <th class="test-tasks__header-cell cell__description">{{ currentDescription.description }}</th>
-            <th class="portfolio-table__header-cell cell__description">{{ currentDescription.feedback }}</th>
+            <th class="portfolio-table__header-cell cell__description hide-to-mobile">{{ currentDescription.feedback }}</th>
           </tr>
         </thead>
         <tbody>
@@ -79,7 +79,7 @@
           <td class="test-tasks__cell cell__default word-break">{{ testTask.technologies }}</td>
           <td class="test-tasks__cell cell__default">{{ testTask.objective }}</td>
           <td class="test-tasks__cell cell__default">{{ testTask.description }}</td>
-          <td class="test-tasks__cell cell__default">{{ testTask.feedback }}</td>
+          <td class="test-tasks__cell cell__default hide-to-mobile">{{ testTask.feedback }}</td>
         </tr>
         </tbody>
       </table>
@@ -560,6 +560,10 @@ transition: color ease 1s 1s;
 }
 .word-break {
   word-break: break-all;
-
+}
+.hide-to-mobile {
+  @media screen and (max-width: 480px) {
+  display: none;
+  }
 }
 </style>

@@ -862,7 +862,7 @@ export const myTestTasks: MyTestTasks =
       title: "Redactor",
       company: "05RU",
       githubTitle: "vue-redactor-task",
-      objective: "Создать приложение-редактор",
+      objective: "Create redactor",
       description: "Create an editor application",
       technologies: "HTML, CSS, JavaScript, Vue",
       deployUrl: "https://crecker05ru.github.io/vue-redactor-task/",
@@ -1079,7 +1079,7 @@ export const myTestTasks: MyTestTasks =
     },{
       title: "Weather widget",
       githubTitle: "weather-api-reactjs",
-      objective: "Создать виджет погоды и конвертор валют",
+      objective: "Create a weather widget and currency converter",
       description: "Create a weather widget and currency converter",
       technologies: "HTML, JavaScript, React",
       sourceCodeUrl: "https://github.com/crecker05ru/weather-api-reactjs",

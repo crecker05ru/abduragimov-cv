@@ -65,7 +65,7 @@
 </Transition>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref,onMounted } from 'vue';
 
 const isLightTheme = ref(true)
 const isChecked = ref(false)
