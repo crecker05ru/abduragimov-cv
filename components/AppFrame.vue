@@ -25,6 +25,14 @@
     &__frame {
     min-height: 320px;
     min-width: 680px;
+    @media screen and (max-width: 780px) {
+      min-height: 420px;
+    min-width: 420px;
+    }
+    @media screen and (max-width: 460px) {
+    
+    min-width: 100%;
+    }
     }
   }
   </style>

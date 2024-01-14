@@ -36,6 +36,9 @@ emit('close-modal')
   &__wrapper {
     position: relative;
     overflow: hidden;
+    @media screen and (max-width: 460px) {
+    width: 100%;
+    }
   }
   &__inner {
     padding: 16px;
@@ -45,6 +48,14 @@ emit('close-modal')
     max-width: 980px;
     background-color: #fff;
     border-radius: 8px;
+    @media screen and (max-width: 780px) {
+    min-width: 420px;
+    }
+    @media screen and (max-width: 460px) {
+    min-width: 100%;
+    padding: 0px;
+    padding-top: 24px;
+    }
   }
   &__close-button {
     position: absolute;
@@ -52,7 +63,11 @@ emit('close-modal')
     right: 16px;
     font-size: 24px;
     border: none;
-    background-color: var(--main-background-color);
+    background-color: transparent;
+    @media screen and (max-width: 460px) {
+    min-width: 100%;
+
+    }
 
   }
   &__content {
