@@ -26,6 +26,7 @@
       </address>
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.maritalStatus }}:</span> <span class="my-cv__description-value">{{ currentCv.maritalStatus }}</span></p>
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.dateOfBirth }}:</span> <span class="my-cv__description-value">{{ currentCv.dateOfBirth }}</span></p>
+      <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.totalExperience }}:</span> <span class="my-cv__description-value">{{ computedYear() }} {{ computedYear() > 1 ? currentDescription.years : currentDescription.year }}<span>{{ computedMonth() > 0 ? " " + currentDescription.and + " " : ' ' }}</span><span v-if="computedMonth()">{{ computedMonth() }} {{ computedMonth() > 1 ? currentDescription.months : currentDescription.month }}</span> </span></p>
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.objective }}:</span> <span class="my-cv__description-value">{{ currentCv.objective }}</span></p>
       <p class="my-cv__description-row"><span class="my-cv__description-key">{{ currentDescription.education }}:</span> <span class="my-cv__description-value">{{ currentCv.education[0] }}</span></p>
       <ul class="my-cv__list_column"><span class="my-cv__description-key">{{ currentDescription.workExperience }}:</span> 
@@ -141,7 +142,13 @@ const descriptionMap = {
         completed: "Завершен",
         image: "Изображение",
         difficulty: "Сложность",
-        involvementRating: "Рейтинг вовлеченности"
+        involvementRating: "Рейтинг вовлеченности",
+        totalExperience: "Общий стаж",
+        month: "месяц",
+        months: "месяцев",
+        years: "года",
+        year: "год",
+        and: "и"
 
     },
     "en":{
@@ -172,8 +179,13 @@ const descriptionMap = {
         completed: "Completed",
         image: "Image",
         difficulty: "Difficulty",
-        involvementRating: "Involvement Rating"
-
+        involvementRating: "Involvement Rating",
+        totalExperience: "Total experience",
+        month: "month",
+        months: "months",
+        years: "years",
+        year: "year",
+        and: "and"
     }
 }
 const repos = ref<Repos[]>()
@@ -182,6 +194,19 @@ const currentLanguage = ref("en")
   const languageCheckbox = ref(false)
 const isReposOpened = ref(false)
 const isOverflowed = ref(false)
+const experienceStart = ref(new Date("12-05-2020"))
+const currentTime = ref(new Date())
+const timeDifference = computed(() => {
+  const calcTime =  (currentTime.value.getMonth() - experienceStart.value.getMonth() + 12 * (currentTime.value.getFullYear() - experienceStart.value.getFullYear()))
+  console.log(calcTime)
+  return calcTime
+})
+const computedYear = () => {
+  return Number((timeDifference.value / 12).toFixed(0))
+}
+const computedMonth = () => {
+  return Number((timeDifference.value % 12).toFixed(0))
+}
 const currentTestTask = ref("")
   const switchLanguage = () => {
     console.log(currentLanguage.value,"currentLanguage.value")
@@ -272,9 +297,21 @@ const isModalOpened = ref(false)
     color: var(--secondary-text-color);
     margin-right: 12px;
     transition: color ease 1s 1s;
+    @media screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: 14px;
+  }
   }
   &__description-value {
     transition: color ease 1s 1s;
+    @media screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: 14px;
+  }
   }
   &__description-link {
     width: fit-content;
@@ -392,6 +429,12 @@ const isModalOpened = ref(false)
 }
 &__list-item {
     transition: color ease 1s 1s;
+    @media screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: 14px;
+  }
   }
 &__repos-item {
   display: flex;
@@ -505,6 +548,18 @@ const isModalOpened = ref(false)
   &__name {
     min-width: 160px;
     transition: color ease 1s 1s;
+    padding: 2px 4px;
+    box-shadow: 0px 1px 2px 1px #575757;
+    border-radius: 4px;
+    transition: color,background-color 0.2s ease;
+    &:hover {
+      background-color: var(--link-hover-color);
+      color: var(--item-text-color);
+    }
+    @media (hover: none) {
+      background-color: transparent;
+      color: var(--main-text-color);
+    }
     @media screen and (max-width: $tablet) {
       min-width: 100px;
     }
@@ -551,6 +606,16 @@ transition: color ease 1s 1s;
     white-space: nowrap;
     transition: color, background-color 0.2s ease;
     cursor: pointer;
+    box-shadow: 0px 1px 2px 1px #575757;
+    border-radius: 4px;
+    &:hover {
+      background-color: var(--link-hover-color);
+      color: var(--item-text-color);
+    }
+    @media (hover: none) {
+      background-color: transparent;
+      color: var(--main-text-color);
+    }
     &:hover {
       background-color: var(--link-hover-color);
       color: var(--item-text-color);

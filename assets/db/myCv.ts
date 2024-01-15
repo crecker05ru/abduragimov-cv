@@ -63,11 +63,14 @@ const myCv: CV = {
    Управление задачами в ClickUp,разработка пользовательского интерфейса, привязка пользовательского интерфейса к API используя фреймворк Next.js,типизация объектов при помощи TypeScript,правка и добавление блоков сайта по макету Figma , взаимодействие с Git и управление ветками репозитория в GitLab.Обновил стек приложения с фреймворка Vue 2 на последнюю версию React.
   `,
   `
-  Июнь 2021 — февраль 2022
+  Июнь 2021 — Февраль 2022
 Индивидуальное предпринимательство / частная практика / фриланс
 Махачкала
 Frontend-разработчик
 Разработка веб приложения, разработка веб компонентов на технологиях React/Next.js,создание серверной части приложения и API на технологиях Node js/Postgres.
+
+Май 2020 - Июнь 2021
+Период обучения фронтенд разработки.Технологии: HTML,CSS,JavaScript,React,Next.js
 `
   ],
     skills: ["HTML", "CSS", "SCSS", "JavaScript", "TypeScript", "React JS","Redux","React-Redux", "Next.js","Vue 3","Vuex","Pinia", "Nuxt","Angular","NgRx","Git","BEM","RestAPI",
@@ -117,7 +120,10 @@ Frontend-разработчик
    Individual entrepreneurship / private practice / freelancing.
    Makhachkala.
    Frontend developer.
-   Development of a web application, development of web components using React/Next.js technologies, creation of a server part of the application and API using Node js/Postgres technologies.`
+   Development of a web application, development of web components using React/Next.js technologies, creation of a server part of the application and API using Node js/Postgres technologies.
+   
+   May 2020 - June 2021
+   Front-end development training period. Technologies: HTML, CSS, JavaScript, React, Next.js`
     ],
     skills: ["HTML", "CSS", "SCSS", "JavaScript", "TypeScript", "React JS","Redux","React-Redux", "Next.js","Vue 3","Vuex","Pinia", "Nuxt","Angular","NgRx","Git","BEM","RestAPI",
     "Driving License - B"],
