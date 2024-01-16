@@ -1,4 +1,4 @@
-import{d as v,r as s,t as c,v as i,x as e,G as g,J as k,o as y,T as M,A as u,U as _,z as p,F as C,H as b,I as Y,E as z}from"./entry.sU_muXeK.js";const B=e("switch",null,[e("foreignObject",{requiredExtensions:"&ns_ai;",x:"0",y:"0",width:"1",height:"1"}),e("g",{"i:extraneous":"self"},[e("path",{d:`M727.6,348.1c-2.8-29.9-14.9-57.6-38.1-77.2c-24.7-20.9-62.4-30.6-94.1-32.4c-35.6-2-71.8,1-107.6,0.3
+import{d as v,r as s,t as c,v as i,x as e,G as g,J as k,o as y,T as M,A as u,U as _,z as p,F as C,H as b,I as Y,E as z}from"./entry.zYaXZa3q.js";const B=e("switch",null,[e("foreignObject",{requiredExtensions:"&ns_ai;",x:"0",y:"0",width:"1",height:"1"}),e("g",{"i:extraneous":"self"},[e("path",{d:`M727.6,348.1c-2.8-29.9-14.9-57.6-38.1-77.2c-24.7-20.9-62.4-30.6-94.1-32.4c-35.6-2-71.8,1-107.6,0.3
 			c-21.7-0.4-43.5,1.4-65.3,1.9c-27.7,0.6-55.3,0.3-83-0.1c-45.1-0.6-90-0.9-135.1-1c-11,0-22.1-0.1-33.1-0.1
 			c-28.2-0.1-55.4,2.3-81.6,13.8c-33.9,14.9-56,39.9-64.2,76.4c-4.8,21.1-5.2,42.4-2.2,63.7c3.5,25.1,10.4,49.3,23.9,71
 			c16.8,27.1,43.8,44.4,75.7,47.3c21.9,2,42.8-2.3,63.1-10c30.5-11.6,56.8-29.8,80.7-51.7c9.5-8.7,19.1-17.4,26.7-27.9
