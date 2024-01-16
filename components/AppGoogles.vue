@@ -55,7 +55,7 @@
     ref="mobileGooglesEl"
     class="app-googles__mobile-googles"
     @touchstart="handleTouchStart"
-    @touchend="handleTouchEnd"
+    @touchmove="handleTouchEnd"
   >
     <svg
       class="app-googles__googles-svg"
@@ -139,14 +139,20 @@ const handleDragEnd = (e: any) => {
 };
 
 const handleTouchStart = (e: any) => {
+  console.log("handleTouchStart e.screenY", e.screenY);
 
-  mobileShiftX.value = e.clientX - mobileGooglesEl.value.getBoundingClientRect().left;
-  mobileShiftY.value = e.clientY - mobileGooglesEl.value.getBoundingClientRect().top;
+  mobileShiftX.value = e.changedTouches[0].clientX - mobileGooglesEl.value.getBoundingClientRect().left;
+  mobileShiftY.value = e.changedTouches[0].clientY - mobileGooglesEl.value.getBoundingClientRect().top;
 };
 const handleTouchEnd = (e: any) => {
+  console.log("handleTouchEnd e", e);
 
-  mobileGooglesEl.value.style.top = `${e.pageY - mobileShiftY.value}px`;
-  mobileGooglesEl.value.style.left = `${e.pageX - mobileShiftX.value}px`;
+  // mobileGooglesEl.value.style.top = `${e.target.pageY - mobileShiftY.value}px`;
+  // mobileGooglesEl.value.style.left = `${e.target.pageX - mobileShiftX.value}px`;
+
+    mobileGooglesEl.value.style.top = `${e.changedTouches[0].pageY - mobileShiftY.value}px`;
+  mobileGooglesEl.value.style.left = `${e.changedTouches[0].pageX - mobileShiftX.value}px`;
+
 };
 </script>
 <style lang="scss">
