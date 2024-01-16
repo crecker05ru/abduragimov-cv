@@ -194,7 +194,7 @@ const currentLanguage = ref("en")
   const languageCheckbox = ref(false)
 const isReposOpened = ref(false)
 const isOverflowed = ref(false)
-const experienceStart = ref(new Date("12-05-2020"))
+const experienceStart = ref(new Date("2020-06-05"))
 const currentTime = ref(new Date())
 const timeDifference = computed(() => {
   const calcTime =  (currentTime.value.getMonth() - experienceStart.value.getMonth() + 12 * (currentTime.value.getFullYear() - experienceStart.value.getFullYear()))
@@ -202,10 +202,10 @@ const timeDifference = computed(() => {
   return calcTime
 })
 const computedYear = () => {
-  return Number((timeDifference.value / 12).toFixed(0))
+  return Math.floor((timeDifference.value / 12))
 }
 const computedMonth = () => {
-  return Number((timeDifference.value % 12).toFixed(0))
+  return Number((timeDifference.value % 12))
 }
 const currentTestTask = ref("")
   const switchLanguage = () => {
