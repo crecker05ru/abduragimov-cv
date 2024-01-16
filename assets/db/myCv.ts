@@ -68,10 +68,9 @@ const myCv: CV = {
 Махачкала
 Frontend-разработчик
 Разработка веб приложения, разработка веб компонентов на технологиях React/Next.js,создание серверной части приложения и API на технологиях Node js/Postgres.
-
-Май 2020 - Июнь 2021
-Период обучения фронтенд разработки.Технологии: HTML,CSS,JavaScript,React,Next.js
-`
+`,
+`Май 2020 - Июнь 2021
+Период обучения фронтенд разработки.Технологии: HTML,CSS,JavaScript,React,Next.js`
   ],
     skills: ["HTML", "CSS", "SCSS", "JavaScript", "TypeScript", "React JS","Redux","React-Redux", "Next.js","Vue 3","Vuex","Pinia", "Nuxt","Angular","NgRx","Git","BEM","RestAPI",
       
@@ -121,8 +120,8 @@ Frontend-разработчик
    Makhachkala.
    Frontend developer.
    Development of a web application, development of web components using React/Next.js technologies, creation of a server part of the application and API using Node js/Postgres technologies.
-   
-   May 2020 - June 2021
+   `,
+   `May 2020 - June 2021
    Front-end development training period. Technologies: HTML, CSS, JavaScript, React, Next.js`
     ],
     skills: ["HTML", "CSS", "SCSS", "JavaScript", "TypeScript", "React JS","Redux","React-Redux", "Next.js","Vue 3","Vuex","Pinia", "Nuxt","Angular","NgRx","Git","BEM","RestAPI",
