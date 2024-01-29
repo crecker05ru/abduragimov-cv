@@ -82,6 +82,7 @@ Frontend-разработчик
         {name: "Август 2021 , freecodecamp.org, JavaScript algoritms and data structures,",certificateUrl:"https://www.freecodecamp.org/certification/fcc61df5419-4666-479a-8c14-650407e6943c/javascript-algorithms-and-data-structures"},
         {name: `Октябрь 2022 ,  JS/FE Pre-School 2022Q4 RS School, Frontend`,certificateUrl: "https://app.rs.school/certificate/s1vbxi29"},
         {name: `Март 2023 JavaScript/Front-end 2023Q1 Roling Scopes School, Frontend`,certificateUrl: "https://app.rs.school/certificate/zefjkv1f"},
+        {name: `Октябрь 2023 Angular 2023Q4 Roling Scopes School, Frontend`,certificateUrl: "https://app.rs.school/certificate/flv7mwku"},
       ]
   },
   "en": {
@@ -133,6 +134,7 @@ Frontend-разработчик
         {name: "August 2021 , freecodecamp.org, JavaScript algoritms and data structures,",certificateUrl:"https://www.freecodecamp.org/certification/fcc61df5419-4666-479a-8c14-650407e6943c/javascript-algorithms-and-data-structures"},
         {name: `October 2022 ,  JS/FE Pre-School 2022Q4 RS School, Frontend`,certificateUrl: "https://app.rs.school/certificate/s1vbxi29"},
         {name: `March 2023 JavaScript/Front-end 2023Q1 Roling Scopes School, Frontend`,certificateUrl: "https://app.rs.school/certificate/zefjkv1f"},
+        {name: `October 2023 Angular 2023Q4 Roling Scopes School, Frontend`,certificateUrl: "https://app.rs.school/certificate/flv7mwku"},
       ]
   }
 }
