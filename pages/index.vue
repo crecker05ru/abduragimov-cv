@@ -1,6 +1,7 @@
 <template>
   
   <div class="my-cv wrapper">
+    <AppChat/>
     <header class="my-cv__header">
       <h1 class="my-cv__initials">{{ currentCv.initials }}</h1>
       <h2 class="my-cv__specialization" > {{ currentCv.specialization }}</h2>
