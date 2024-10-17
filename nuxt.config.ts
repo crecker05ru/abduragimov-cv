@@ -1,8 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  runtimeConfig: {
+    baseUrl: '', // can be overridden by NUXT_API_SECRET environment variable
+    public: {
+      apiBase: '', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
+    }
+  },
   app: {
-    baseURL: '/abduragimov-cv/',
+    baseURL: process.env.BASE_URL || '',
     buildAssetsDir: 'assets', 
     head: {
       title: 'Frontend Developer Anvar Abduragimov',
