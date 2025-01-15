@@ -21,6 +21,32 @@ export default defineNuxtConfig({
     },
   },
   css: ["./assets/styles/global.scss"],
+  modules: [
+    // ['nuxt-use-sound', 
+    //   // {
+    //   //   sound: {
+    //   //     back: {
+    //   //       src: "./assets/sounds/pop_sound.mp3",
+    //   //       options: {
+    //   //         volume: 0.25
+    //   //       }
+    //   //     }
+    //   //   },
+    //   // }
+    //   {
+    //     sound: {
+    //       sounds: {
+    //         back: {
+    //           src: "/back.wav",
+    //           options: {
+    //             volume: 0.25
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // ]
+  ],
   vite: {
     plugins: [
       svgLoader(),

@@ -2,7 +2,7 @@
   <Transition name="back"  mode="out-in">
   <div class="default-layout" :class="[isLightTheme ? 'light-theme' : 'dark-theme']">
 
-    <AppGoogles :darkMode="!isLightTheme"/>
+    <!-- <AppGoogles :darkMode="!isLightTheme"/> -->
   <header class="header">
 <div class="header__inner">
 

@@ -1,5 +1,8 @@
 <template>
   <section class="chat">
+    <audio id="popUp">
+      <source src="/public/sounds/on_enter_sound.wav" />
+    </audio>
     <transition mode="out-in">
       <arrowDown
         class="chat__window-arrow"
@@ -56,6 +59,9 @@ const isUserConnected = ref(false);
 const username = ref("");
 const isChatOpened = ref(false);
 const socket = ref();
+const popUpElement = ref()
+// const enterAudio = new Audio("/assets/sounds/on-enter-sound.wav");
+// const popAudio = new Audio("/assets/sounds/pop-sound.wav");
 console.log("${process.env.BASE_URL}", config.app.baseURL);
 const connect = () => {
   socket.value = new WebSocket(`ws://localhost:3002/echo`);
@@ -82,6 +88,7 @@ const connect = () => {
       message.message = `${message.username} disconnected`;
       messages.value.push(message);
     }
+    // popAudio.play()
     messageInput.value = "";
   };
   socket.value.onclose = () => {
@@ -131,8 +138,15 @@ const onNicknameEnter = (e) => {
 const onInputEnter = (e) => {
   if (e.key == "Enter") {
     sendMessage(messageInput.value);
+    // enterAudio.play()
+    popUpElement.value?.play()
   }
 };
+
+onMounted(() => {
+  popUpElement.value = document.querySelector('#popUp')
+  console.log('popUpElement.value',popUpElement.value)
+})
 </script>
 <style lang="scss" scoped>
 .chat {

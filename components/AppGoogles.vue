@@ -159,13 +159,20 @@ const handleTouchEnd = (e: any) => {
 .app-googles {
   &__photo-googles {
     position: absolute;
-    top: 270px;
-    left: 85px;
+    // top: 270px;
+    // left: 85px;
+    top: 190px;
+    // left: 84px;
+    left: 56px;
     cursor: pointer;
     z-index: 5;
     @media (hover: none) {
       display: none;
       z-index: -1;
+    }
+
+    @media screen and (max-width: $desktop) {
+      left: 84px;
     }
     @media screen and (max-width: $tablet) {
       left: 78px;
@@ -173,8 +180,9 @@ const handleTouchEnd = (e: any) => {
     @media screen and (max-width: $mobile) {
       left: 70px;
     }
-    @media screen and (max-width: 338px) {
-      top: 310px;
+
+    @media screen and (max-width: 347px) {
+      top: 228px;
       left: 70px;
     }
   }

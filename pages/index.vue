@@ -1,5 +1,6 @@
 <template>
   <div class="my-cv wrapper">
+    <AppGoogles :darkMode="!isLightTheme"/>
     <AppChat />
     <header class="my-cv__header">
       <h1 class="my-cv__initials">{{ currentCv.initials }}</h1>
@@ -434,6 +435,7 @@ const isReposOpened = ref(false);
 const isOverflowed = ref(false);
 const experienceStart = ref(new Date("2020-06-05"));
 const currentTime = ref(new Date());
+const isLightTheme = ref(true)
 const timeDifference = computed(() => {
   const calcTime =
     currentTime.value.getMonth() -
@@ -449,6 +451,10 @@ const computedYear = () => {
 const computedMonth = () => {
   return Number(timeDifference.value % 12);
 };
+const switchTheme = () => {
+  isLightTheme.value = !isLightTheme.value
+  localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
+}
 const currentTestTask = ref("");
 const switchLanguage = () => {
   console.log(currentLanguage.value, "currentLanguage.value");
@@ -527,6 +533,19 @@ onMounted(() => {
         }
       }
     });
+
+    window.addEventListener("beforeunload", () => {
+    localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
+  });
+  const isLight = JSON.parse(localStorage.getItem('cv-theme') || "" )
+  setTimeout(() => {
+  isLightTheme.value = Boolean(isLight)
+  }, 20);
+  console.log('isTheme',isLight,isLightTheme.value)
+  window.addEventListener("beforeunload", () => {
+    localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))
+  });
+
   })();
 });
 
@@ -534,6 +553,7 @@ const isModalOpened = ref(false);
 </script>
 <style lang="scss" scoped>
 .my-cv {
+  position: relative;
   &__initials {
     transition: color ease 1s 1s;
   }
