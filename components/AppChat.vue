@@ -1,7 +1,10 @@
 <template>
   <section class="chat">
-    <audio id="popUp">
-      <source src="/public/sounds/on_enter_sound.wav" />
+    <audio id="onEnter" ref="onEnterElement">
+      <source src="/sounds/on_enter_sound.wav" />
+    </audio>
+    <audio id="popUp" ref="popUpElement">
+      <source src="/sounds/pop_sound.mp3" />
     </audio>
     <transition mode="out-in">
       <arrowDown
@@ -24,7 +27,7 @@
           <span
             class="chat__message-username"
             v-if="message.event === 'message'"
-            >{{ message.username }}:</span
+            >{{ message.username }}:&nbsp;</span
           >
           <span class="chat__message-text">{{ message.message }}</span>
         </li>
@@ -60,6 +63,7 @@ const username = ref("");
 const isChatOpened = ref(false);
 const socket = ref();
 const popUpElement = ref()
+const onEnterElement = ref()
 // const enterAudio = new Audio("/assets/sounds/on-enter-sound.wav");
 // const popAudio = new Audio("/assets/sounds/pop-sound.wav");
 console.log("${process.env.BASE_URL}", config.app.baseURL);
@@ -89,6 +93,9 @@ const connect = () => {
       messages.value.push(message);
     }
     // popAudio.play()
+    if(message?.username !== username.value){
+       popUpElement.value?.play()
+    }
     messageInput.value = "";
   };
   socket.value.onclose = () => {
@@ -139,12 +146,12 @@ const onInputEnter = (e) => {
   if (e.key == "Enter") {
     sendMessage(messageInput.value);
     // enterAudio.play()
-    popUpElement.value?.play()
+    onEnterElement.value?.play()
   }
 };
 
 onMounted(() => {
-  popUpElement.value = document.querySelector('#popUp')
+  // popUpElement.value = document.querySelector('#popUp')
   console.log('popUpElement.value',popUpElement.value)
 })
 </script>
@@ -164,11 +171,13 @@ onMounted(() => {
     width: 200px;
     height: 150px;
     overflow-y: auto;
+    overflow-x: hidden;
     border-radius: var(--border-radius);
     border: 1px solid;
     border-color: var(--item-background-color);
     color: var(--main-text-color);
     background-color: var(--gradient-from-color);
+    scrollbar-width: thin;
   }
   &__window-arrow {
     position: absolute;
@@ -198,6 +207,12 @@ onMounted(() => {
     // -webkit-box-orient: vertical;
     // -webkit-line-clamp: 1;
     // display: -webkit-box;
+  }
+  &__message {
+    margin-bottom: 8px;
+  }
+  &__message-text {
+    word-break: break-all;
   }
 }
 </style>
