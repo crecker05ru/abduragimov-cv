@@ -4,8 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig: {
     baseUrl: '', // can be overridden by NUXT_API_SECRET environment variable
+    
     public: {
       apiBase: '', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
+      baseWS: process.env.NUXT_PUBLIC_API_WS || '',
     }
   },
   app: {

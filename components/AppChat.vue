@@ -67,8 +67,10 @@ const onEnterElement = ref()
 // const enterAudio = new Audio("/assets/sounds/on-enter-sound.wav");
 // const popAudio = new Audio("/assets/sounds/pop-sound.wav");
 console.log("${process.env.BASE_URL}", config.app.baseURL);
+console.log("config.public", config.public.baseWS);
+
 const connect = () => {
-  socket.value = new WebSocket(`ws://localhost:3002/echo`);
+  socket.value = new WebSocket(`${config.public.baseWS}`);
   socket.value.onopen = () => {
     isUserConnected.value = true;
     const message = {
