@@ -69,8 +69,11 @@ const onEnterElement = ref()
 console.log("${process.env.BASE_URL}", config.app.baseURL);
 console.log("config.public", config.public.baseWS);
 
+function isOpen(ws) { return ws.readyState === ws.OPEN }
+
 const connect = () => {
   socket.value = new WebSocket(`${config.public.baseWS}`);
+  console.log('isOpen(socket.value)',isOpen(socket.value))
   socket.value.onopen = () => {
     isUserConnected.value = true;
     const message = {
@@ -110,7 +113,9 @@ const connect = () => {
     };
     socket.value.send(JSON.stringify(message));
   };
-  socket.value.onerror = () => {};
+  socket.value.onerror = (e) => {
+    console.log('WS ERROR', e)
+  };
 };
 
 const disconnect = () => {
