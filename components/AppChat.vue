@@ -74,8 +74,9 @@ function isOpen(ws) { return ws.readyState === ws.OPEN }
 const connect = () => {
   socket.value = new WebSocket(`${config.public.baseWS}`);
   console.log('isOpen(socket.value)',isOpen(socket.value))
-  socket.value.onopen = () => {
+  socket.value.onopen = (e) => {
     isUserConnected.value = true;
+    console.log('socket e',e)
     const message = {
       event: "connection",
       username: username.value,
@@ -86,8 +87,11 @@ const connect = () => {
 
   socket.value.onmessage = (event) => {
     console.log("messages.value", messages.value);
+    console.log("event", event);
     const message = JSON.parse(event.data);
     // messages.value.push(message)
+    console.log('message',message)
+
     if (message.event == "connection") {
       message.message = `${message.username} connected`;
       messages.value.push(message);
@@ -96,6 +100,8 @@ const connect = () => {
     } else if (message.event == "close") {
       message.message = `${message.username} disconnected`;
       messages.value.push(message);
+    }else if(Array.isArray(message)){
+      messages.value.push(...message);
     }
     // popAudio.play()
     if(message?.username !== username.value){
