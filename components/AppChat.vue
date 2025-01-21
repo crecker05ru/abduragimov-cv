@@ -151,6 +151,7 @@ const showChat = () => {
 const onNicknameEnter = (e) => {
   console.log("e", e);
   if (e.key == "Enter") {
+    localStorage.setItem('username',username.value)
     connect();
   }
 };
@@ -165,6 +166,12 @@ const onInputEnter = (e) => {
 
 onMounted(() => {
   // popUpElement.value = document.querySelector('#popUp')
+  let user = localStorage.getItem('username')
+  console.log('user',user)
+  if(user){
+    username.value = user
+    connect()
+  }
   console.log('popUpElement.value',popUpElement.value)
 })
 </script>
