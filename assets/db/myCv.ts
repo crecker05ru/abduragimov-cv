@@ -99,7 +99,7 @@ Frontend-разработчик
     maritalStatus: "married",
     dateOfBirth: "12th February 1991",
     objective: "Create convenient, accessible and interactive UI,create usefull web applications,grow as a professional in frontend development.",
-    aboutMe: `More than 2 years of experience in front-end development.
+    aboutMe: `More than 5 years of experience in front-end development.
     Excellent knowledge of HTML, CSS, JavaScript and TypeScript (basic).
     Experience with libraries and frameworks such as React, Next.js, Vue 3, Nuxt 2/3.
     Knowledge of HTML5, CSS3, application of responsive design.
