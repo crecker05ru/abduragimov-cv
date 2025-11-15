@@ -1,6 +1,6 @@
 <template>
   <div class="my-cv wrapper">
-    <AppGoogles :darkMode="!isLightTheme"/>
+    <!-- <AppGoogles :darkMode="!isLightTheme"/> -->
     <AppChat />
     <header class="my-cv__header">
       <h1 class="my-cv__initials">{{ currentCv.initials }}</h1>
@@ -226,14 +226,14 @@
           </tr>
         </tbody>
       </table>
-      <div class="my-cv__test-tasks">
+      <div class="my-cv__test-tasks" v-if="false">
         <span class="my-cv__description-key"
           >{{ currentDescription.testTasks }}:<span>{{
             currentTestTasks?.length
           }}</span></span
         >
       </div>
-      <table class="my-cv__table test-tasks">
+      <table class="my-cv__table test-tasks" v-if="false">
         <thead class="test-tasks__header">
           <tr class="test-tasks__row">
             <th class="test-tasks__header-cell cell__text">

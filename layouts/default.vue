@@ -2,7 +2,7 @@
   <Transition name="back"  mode="out-in">
   <div class="default-layout" :class="[isLightTheme ? 'light-theme' : 'dark-theme']">
 
-    <!-- <AppGoogles :darkMode="!isLightTheme"/> -->
+    <AppGoogles :darkMode="!isLightTheme"/>
   <header class="header">
 <div class="header__inner">
 
@@ -58,7 +58,7 @@
   <footer class="footer">
     <div class="footer__inner">
     <p>By Anvar</p>
-    <a href="" target="_blank">Github</a>
+    <a href="https://github.com/crecker05ru" target="_blank">Github</a>
     </div>
   </footer>
 </div>

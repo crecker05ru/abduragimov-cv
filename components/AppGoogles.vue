@@ -130,12 +130,25 @@ const handleDragEnd = (e: any) => {
   console.log("e.clientY", e.clientY);
   console.log("e.offsetY", e.offsetY);
   console.log("e.screenY", e.screenY);
+  console.log("e.pageY", e.pageY);
+  console.log("e.clientX", e.clientX);
+  console.log("e.offsetX", e.offsetX);
+  console.log("e.screenX", e.screenX);
+  console.log("e.pageX", e.pageX);
+  console.log("shiftY.value", shiftY.value);
+  console.log("shiftX.value", shiftX.value);
   console.log(
-    "photoGooglesEl.value",
+    "BEFORE photoGooglesEl.value",
     photoGooglesEl.value.getBoundingClientRect()
   );
   photoGooglesEl.value.style.top = `${e.pageY - shiftY.value}px`;
   photoGooglesEl.value.style.left = `${e.pageX - shiftX.value}px`;
+
+  console.log(
+    "AFTER photoGooglesEl.value",
+    photoGooglesEl.value.getBoundingClientRect()
+  );
+  console.log('photoGooglesEl.value.style',photoGooglesEl.value.style)
 };
 
 const handleTouchStart = (e: any) => {
@@ -164,6 +177,8 @@ const handleTouchEnd = (e: any) => {
     top: 190px;
     // left: 84px;
     left: 56px;
+    top: 270px;
+    left: 270px;
     cursor: pointer;
     z-index: 5;
     @media (hover: none) {
@@ -182,8 +197,11 @@ const handleTouchEnd = (e: any) => {
     }
 
     @media screen and (max-width: 347px) {
-      top: 228px;
+      // top: 228px;
       left: 70px;
+    }
+    @media screen and (max-width: 329px) {
+      top: 308px;
     }
   }
   &__mobile-googles {

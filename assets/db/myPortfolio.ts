@@ -52,6 +52,17 @@ export interface MyTestTasks {
 export const myPortfolio: MyPortfolio = {
   "ru": [
     {
+      title: "Stock",
+      githubTitle: "stock-app",
+      objective: "Синтаксис Vue 3, проверка идей",
+      description: "Моя песочница для тестирования новых фич Vue 3 и продумывание идей",
+      technologies: "HTML,CSS,Typescript,Vue,SQLite",
+      deployUrl: "https://crecker05ru.github.io/momentum-rss/",
+      sourceCodeUrl: "https://stock.abduragimovdev.ru/",
+      startedAt: "14.04.2025",
+      completedAt: ""
+    },
+    {
       title: "Momentum",
       githubTitle: "momentum-rss",
       objective: "Написать с нуля аналог плагина Google Momentum",
@@ -217,6 +228,17 @@ export const myPortfolio: MyPortfolio = {
 
   ],
   "en": [
+    {
+      title: "Stock",
+      githubTitle: "stock-app",
+      objective: "New Vue 3 features, check ideas",
+      description: "My playground for checking new features and ideas",
+      technologies: "HTML,CSS,Typescript,Vue,SQLite",
+      deployUrl: "https://crecker05ru.github.io/momentum-rss/",
+      sourceCodeUrl: "https://stock.abduragimovdev.ru/",
+      startedAt: "14.04.2025",
+      completedAt: ""
+    },
     {
       title: "Momentum",
       githubTitle: "momentum-rss",
