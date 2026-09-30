@@ -1,0 +1,214 @@
+{
+  "resolvedId": "J:/Javascript-practice/abduragimov-cv/cv/components/AppFrame.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template >\r\n  <div class=\"app-frame\">\r\n    <div class=\"app-frame__wrapper\">\r\n    <div class=\"app-frame__inner\">\r\n      <iframe class=\"app-frame__frame\" :src=\"source\" :allow=\"allow\" style=\"border: none;\" loading=\"lazy\" :width=width :height=height></iframe>\r\n    </div>\r\n  </div>\r\n    <slot/>\r\n  </div>\r\n  </template>\r\n  <script lang=\"ts\" setup>\r\n  defineProps<{\r\n    source?: string\r\n    width? :string\r\n    height?: string\r\n    allow?: string\r\n  }>()\r\n  defineEmits(['close-frame'])\r\n  </script>\r\n  <style lang=\"scss\">\r\n  .app-frame {\r\n    width: 100%;\r\n\r\n\r\n    &__frame {\r\n    min-height: 320px;\r\n    min-width: 680px;\r\n    @media screen and (max-width: 780px) {\r\n      min-height: 420px;\r\n    min-width: 420px;\r\n    }\r\n    @media screen and (max-width: 460px) {\r\n    \r\n    min-width: 100%;\r\n    }\r\n    }\r\n  }\r\n  </style>",
+      "start": 1790757229693,
+      "end": 1790757229775,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1790757229775,
+      "end": 1790757229775,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1790757229775,
+      "end": 1790757229775,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1790757229775,
+      "end": 1790757229775,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1790757229775,
+      "end": 1790757229775,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1790757229775,
+      "end": 1790757229775,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1790757229775,
+      "end": 1790757229775,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1790757229775,
+      "end": 1790757229775,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"J:/Javascript-practice/abduragimov-cv/cv/components/AppFrame.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"J:/Javascript-practice/abduragimov-cv/cv/components/AppFrame.vue?vue&type=script&setup=true&lang.ts\";\nimport \"J:/Javascript-practice/abduragimov-cv/cv/components/AppFrame.vue?vue&type=style&index=0&lang.scss\";\nexport default _sfc_main;\n",
+      "start": 1790757229775,
+      "end": 1790757229786,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1790757229786,
+      "end": 1790757229786,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1790757229786,
+      "end": 1790757229787,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1790757229787,
+      "end": 1790757229787,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1790757229787,
+      "end": 1790757229787,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1790757229787,
+      "end": 1790757229787,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1790757229787,
+      "end": 1790757229787,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1790757229787,
+      "end": 1790757229787,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1790757229787,
+      "end": 1790757229787,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1790757229787,
+      "end": 1790757229787,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1790757229787,
+      "end": 1790757229787,
+      "order": "normal"
+    }
+  ]
+}

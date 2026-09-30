@@ -1,0 +1,214 @@
+{
+  "resolvedId": "J:/Javascript-practice/abduragimov-cv/cv/components/AppGoogles.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\r\n  <div\r\n    ref=\"photoGooglesEl\"\r\n    class=\"app-googles__photo-googles\"\r\n    draggable=\"true\"\r\n    @dragstart=\"handleDragStart\"\r\n    @dragend=\"handleDragEnd\"\r\n  >\r\n    <svg\r\n      class=\"app-googles__googles-svg\"\r\n      :class=\"[darkMode ? 'night-glasses' : 'sun-glasses']\"\r\n      color=\"currentColor\"\r\n      fill=\"#00003fdf\"\r\n      version=\"1.1\"\r\n      id=\"Layer_1\"\r\n      xmlns:x=\"&ns_extend;\"\r\n      xmlns:i=\"&ns_ai;\"\r\n      xmlns:graph=\"&ns_graphs;\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n      xmlns:xlink=\"http://www.w3.org/1999/xlink\"\r\n      x=\"0px\"\r\n      y=\"0px\"\r\n      viewBox=\"0 250 750 265\"\r\n      style=\"enable-background: new 0 0 750 750\"\r\n      xml:space=\"preserve\"\r\n    >\r\n      <switch>\r\n        <foreignObject\r\n          requiredExtensions=\"&ns_ai;\"\r\n          x=\"0\"\r\n          y=\"0\"\r\n          width=\"1\"\r\n          height=\"1\"\r\n        >\r\n        </foreignObject>\r\n        <g i:extraneous=\"self\">\r\n          <path\r\n            d=\"M727.6,348.1c-2.8-29.9-14.9-57.6-38.1-77.2c-24.7-20.9-62.4-30.6-94.1-32.4c-35.6-2-71.8,1-107.6,0.3\r\n\t\t\tc-21.7-0.4-43.5,1.4-65.3,1.9c-27.7,0.6-55.3,0.3-83-0.1c-45.1-0.6-90-0.9-135.1-1c-11,0-22.1-0.1-33.1-0.1\r\n\t\t\tc-28.2-0.1-55.4,2.3-81.6,13.8c-33.9,14.9-56,39.9-64.2,76.4c-4.8,21.1-5.2,42.4-2.2,63.7c3.5,25.1,10.4,49.3,23.9,71\r\n\t\t\tc16.8,27.1,43.8,44.4,75.7,47.3c21.9,2,42.8-2.3,63.1-10c30.5-11.6,56.8-29.8,80.7-51.7c9.5-8.7,19.1-17.4,26.7-27.9\r\n\t\t\tc11.3-15.6,21.3-32.1,29.9-49.5c10.6-21.6,19.5-43.8,18-68.6c-0.1-1.8,0.9-2.4,2.2-3c20.7-10.2,41.5-10.8,62.4-0.6\r\n\t\t\tc2.5,1.2,3.2,2.7,3,5.4c-0.6,7.8,0.3,15.6,2,23.2c3.4,16.3,9.7,31.6,17.5,46.3c16,30,33.9,56.2,59.4,78.9\r\n\t\t\tc23.9,21.4,51.6,39,82.1,49.4c22.3,7.7,45.2,11.2,68.6,6.5c32.8-6.5,55.5-26.2,70-55.5C724.9,421,731.1,385.4,727.6,348.1z\r\n\t\t\t M473.7,247.1c-0.6,1-3.6,2.4-5.4,2.8c-21.5,5.3-41.5,11.2-53,31.9c-2.2,4-5,12.8-10.2,6.1c-5.2-6.6-16.3-5.5-23.9-5.6\r\n\t\t\tc-8-0.1-16-0.1-23.9,0.4c-4.1,0.3-7.3,1.4-10.2,4.3c-5,5-7.7,4.4-10.7-1.8c-7.4-15.5-23.3-29.9-40.6-33.2c-4.3-0.8-8.9,0.1-13-1.8\r\n\t\t\tc-1-0.5-1.8-1.5-1.7-2.5c0.2-2.3,3.6-1.5,5-1.4c3.4,0.2,6.9,0.1,10.3,0.2c19.6,0.2,39.3,0.2,58.9,0.2c24.1,0,48.2,0,72.3,0\r\n\t\t\tc14.4,0,28.8-0.2,43.2-0.5C473.5,246,474.1,246.5,473.7,247.1z\"\r\n          />\r\n        </g>\r\n      </switch>\r\n    </svg>\r\n  </div>\r\n  <div\r\n    ref=\"mobileGooglesEl\"\r\n    class=\"app-googles__mobile-googles\"\r\n    @touchstart=\"handleTouchStart\"\r\n    @touchmove=\"handleTouchEnd\"\r\n  >\r\n    <svg\r\n      class=\"app-googles__googles-svg\"\r\n      :class=\"[darkMode ? 'night-glasses' : 'sun-glasses']\"\r\n      color=\"currentColor\"\r\n      fill=\"#00003fdf\"\r\n      version=\"1.1\"\r\n      id=\"Layer_1\"\r\n      xmlns:x=\"&ns_extend;\"\r\n      xmlns:i=\"&ns_ai;\"\r\n      xmlns:graph=\"&ns_graphs;\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n      xmlns:xlink=\"http://www.w3.org/1999/xlink\"\r\n      x=\"0px\"\r\n      y=\"0px\"\r\n      viewBox=\"0 250 750 265\"\r\n      style=\"enable-background: new 0 0 750 750\"\r\n      xml:space=\"preserve\"\r\n    >\r\n      <switch>\r\n        <foreignObject\r\n          requiredExtensions=\"&ns_ai;\"\r\n          x=\"0\"\r\n          y=\"0\"\r\n          width=\"1\"\r\n          height=\"1\"\r\n        >\r\n        </foreignObject>\r\n        <g i:extraneous=\"self\">\r\n          <path\r\n            d=\"M727.6,348.1c-2.8-29.9-14.9-57.6-38.1-77.2c-24.7-20.9-62.4-30.6-94.1-32.4c-35.6-2-71.8,1-107.6,0.3\r\n\t\t\tc-21.7-0.4-43.5,1.4-65.3,1.9c-27.7,0.6-55.3,0.3-83-0.1c-45.1-0.6-90-0.9-135.1-1c-11,0-22.1-0.1-33.1-0.1\r\n\t\t\tc-28.2-0.1-55.4,2.3-81.6,13.8c-33.9,14.9-56,39.9-64.2,76.4c-4.8,21.1-5.2,42.4-2.2,63.7c3.5,25.1,10.4,49.3,23.9,71\r\n\t\t\tc16.8,27.1,43.8,44.4,75.7,47.3c21.9,2,42.8-2.3,63.1-10c30.5-11.6,56.8-29.8,80.7-51.7c9.5-8.7,19.1-17.4,26.7-27.9\r\n\t\t\tc11.3-15.6,21.3-32.1,29.9-49.5c10.6-21.6,19.5-43.8,18-68.6c-0.1-1.8,0.9-2.4,2.2-3c20.7-10.2,41.5-10.8,62.4-0.6\r\n\t\t\tc2.5,1.2,3.2,2.7,3,5.4c-0.6,7.8,0.3,15.6,2,23.2c3.4,16.3,9.7,31.6,17.5,46.3c16,30,33.9,56.2,59.4,78.9\r\n\t\t\tc23.9,21.4,51.6,39,82.1,49.4c22.3,7.7,45.2,11.2,68.6,6.5c32.8-6.5,55.5-26.2,70-55.5C724.9,421,731.1,385.4,727.6,348.1z\r\n\t\t\t M473.7,247.1c-0.6,1-3.6,2.4-5.4,2.8c-21.5,5.3-41.5,11.2-53,31.9c-2.2,4-5,12.8-10.2,6.1c-5.2-6.6-16.3-5.5-23.9-5.6\r\n\t\t\tc-8-0.1-16-0.1-23.9,0.4c-4.1,0.3-7.3,1.4-10.2,4.3c-5,5-7.7,4.4-10.7-1.8c-7.4-15.5-23.3-29.9-40.6-33.2c-4.3-0.8-8.9,0.1-13-1.8\r\n\t\t\tc-1-0.5-1.8-1.5-1.7-2.5c0.2-2.3,3.6-1.5,5-1.4c3.4,0.2,6.9,0.1,10.3,0.2c19.6,0.2,39.3,0.2,58.9,0.2c24.1,0,48.2,0,72.3,0\r\n\t\t\tc14.4,0,28.8-0.2,43.2-0.5C473.5,246,474.1,246.5,473.7,247.1z\"\r\n          />\r\n        </g>\r\n      </switch>\r\n    </svg>\r\n  </div>\r\n</template>\r\n<script setup lang=\"ts\">\r\ndefineProps<{\r\n  darkMode?: boolean;\r\n}>();\r\nconst photoGooglesEl = ref();\r\nconst mobileGooglesEl = ref()\r\nconst shiftX = ref(0);\r\nconst shiftY = ref(0);\r\nconst mobileShiftX = ref(0);\r\nconst mobileShiftY = ref(0);\r\nconst handleDragStart = (e: any) => {\r\n  console.log(\"handleDragStart\", e);\r\n  console.log(\"e.clientY\", e.clientY);\r\n  console.log(\"e.offsetY\", e.offsetY);\r\n  console.log(\"e.screenY\", e.screenY);\r\n  console.log(\r\n    \"photoGooglesEl.value\",\r\n    photoGooglesEl.value.getBoundingClientRect()\r\n  );\r\n  shiftX.value = e.clientX - photoGooglesEl.value.getBoundingClientRect().left;\r\n  shiftY.value = e.clientY - photoGooglesEl.value.getBoundingClientRect().top;\r\n};\r\nconst handleDragEnd = (e: any) => {\r\n  console.log(\"handleDragStart\", e);\r\n  console.log(\"e.clientY\", e.clientY);\r\n  console.log(\"e.offsetY\", e.offsetY);\r\n  console.log(\"e.screenY\", e.screenY);\r\n  console.log(\"e.pageY\", e.pageY);\r\n  console.log(\"e.clientX\", e.clientX);\r\n  console.log(\"e.offsetX\", e.offsetX);\r\n  console.log(\"e.screenX\", e.screenX);\r\n  console.log(\"e.pageX\", e.pageX);\r\n  console.log(\"shiftY.value\", shiftY.value);\r\n  console.log(\"shiftX.value\", shiftX.value);\r\n  console.log(\r\n    \"BEFORE photoGooglesEl.value\",\r\n    photoGooglesEl.value.getBoundingClientRect()\r\n  );\r\n  photoGooglesEl.value.style.top = `${e.pageY - shiftY.value}px`;\r\n  photoGooglesEl.value.style.left = `${e.pageX - shiftX.value}px`;\r\n\r\n  console.log(\r\n    \"AFTER photoGooglesEl.value\",\r\n    photoGooglesEl.value.getBoundingClientRect()\r\n  );\r\n  console.log('photoGooglesEl.value.style',photoGooglesEl.value.style)\r\n};\r\n\r\nconst handleTouchStart = (e: any) => {\r\n  console.log(\"handleTouchStart e.screenY\", e.screenY);\r\n\r\n  mobileShiftX.value = e.changedTouches[0].clientX - mobileGooglesEl.value.getBoundingClientRect().left;\r\n  mobileShiftY.value = e.changedTouches[0].clientY - mobileGooglesEl.value.getBoundingClientRect().top;\r\n};\r\nconst handleTouchEnd = (e: any) => {\r\n  console.log(\"handleTouchEnd e\", e);\r\n\r\n  // mobileGooglesEl.value.style.top = `${e.target.pageY - mobileShiftY.value}px`;\r\n  // mobileGooglesEl.value.style.left = `${e.target.pageX - mobileShiftX.value}px`;\r\n\r\n    mobileGooglesEl.value.style.top = `${e.changedTouches[0].pageY - mobileShiftY.value}px`;\r\n  mobileGooglesEl.value.style.left = `${e.changedTouches[0].pageX - mobileShiftX.value}px`;\r\n\r\n};\r\n</script>\r\n<style lang=\"scss\">\r\n.app-googles {\r\n  &__photo-googles {\r\n    position: absolute;\r\n    // top: 270px;\r\n    // left: 85px;\r\n    top: 190px;\r\n    // left: 84px;\r\n    left: 56px;\r\n    top: 270px;\r\n    left: 270px;\r\n    cursor: pointer;\r\n    z-index: 5;\r\n    @media (hover: none) {\r\n      display: none;\r\n      z-index: -1;\r\n    }\r\n\r\n    @media screen and (max-width: $desktop) {\r\n      left: 84px;\r\n    }\r\n    @media screen and (max-width: $tablet) {\r\n      left: 78px;\r\n    }\r\n    @media screen and (max-width: $mobile) {\r\n      left: 70px;\r\n    }\r\n\r\n    @media screen and (max-width: 347px) {\r\n      // top: 228px;\r\n      left: 70px;\r\n    }\r\n    @media screen and (max-width: 329px) {\r\n      top: 308px;\r\n    }\r\n  }\r\n  &__mobile-googles {\r\n    display: none;\r\n    position: absolute;\r\n    top: 270px;\r\n    left: 85px;\r\n    cursor: pointer;\r\n    z-index: -1;\r\n    @media (hover: none) {\r\n      display: block;\r\n      z-index: 5;\r\n    }\r\n    @media screen and (max-width: $tablet) {\r\n      left: 78px;\r\n    }\r\n    @media screen and (max-width: $mobile) {\r\n      left: 70px;\r\n    }\r\n    @media screen and (max-width: 338px) {\r\n      top: 310px;\r\n      left: 70px;\r\n    }\r\n  }\r\n  &__googles-svg {\r\n    width: 90px;\r\n  }\r\n}\r\n.night-glasses {\r\n  fill: #f6e49c88;\r\n  color: #f6e49c88;\r\n  transition: color, fill ease 1s 1s;\r\n}\r\n.sun-glasses {\r\n  fill: #00003fdf;\r\n  color: #00003fdf;\r\n  transition: color, fill ease 1s 1s;\r\n}\r\n\r\n</style>\r\n",
+      "start": 1790757229379,
+      "end": 1790757229618,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1790757229618,
+      "end": 1790757229618,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1790757229618,
+      "end": 1790757229618,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1790757229618,
+      "end": 1790757229618,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1790757229618,
+      "end": 1790757229618,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1790757229618,
+      "end": 1790757229618,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1790757229618,
+      "end": 1790757229618,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1790757229618,
+      "end": 1790757229618,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"J:/Javascript-practice/abduragimov-cv/cv/components/AppGoogles.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"J:/Javascript-practice/abduragimov-cv/cv/components/AppGoogles.vue?vue&type=script&setup=true&lang.ts\";\nimport \"J:/Javascript-practice/abduragimov-cv/cv/components/AppGoogles.vue?vue&type=style&index=0&lang.scss\";\nexport default _sfc_main;\n",
+      "start": 1790757229618,
+      "end": 1790757229666,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1790757229666,
+      "end": 1790757229666,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1790757229666,
+      "end": 1790757229666,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1790757229667,
+      "end": 1790757229667,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1790757229667,
+      "end": 1790757229667,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1790757229683,
+      "end": 1790757229683,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1790757229683,
+      "end": 1790757229683,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1790757229684,
+      "end": 1790757229684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1790757229684,
+      "end": 1790757229684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1790757229684,
+      "end": 1790757229684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1790757229684,
+      "end": 1790757229684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1790757229684,
+      "end": 1790757229684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1790757229685,
+      "end": 1790757229685,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1790757229685,
+      "end": 1790757229685,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1790757229685,
+      "end": 1790757229685,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1790757229685,
+      "end": 1790757229685,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1790757229685,
+      "end": 1790757229685,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1790757229685,
+      "end": 1790757229686,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1790757229686,
+      "end": 1790757229686,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1790757229686,
+      "end": 1790757229686,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1790757229686,
+      "end": 1790757229686,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1790757229686,
+      "end": 1790757229686,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1790757229686,
+      "end": 1790757229686,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1790757229686,
+      "end": 1790757229686,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1790757229686,
+      "end": 1790757229686,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1790757229686,
+      "end": 1790757229686,
+      "order": "normal"
+    }
+  ]
+}

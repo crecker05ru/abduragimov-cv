@@ -1,0 +1,221 @@
+{
+  "resolvedId": "J:/Javascript-practice/abduragimov-cv/cv/components/AppModal.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, renderSlot as _renderSlot, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode } from \"vue\"\n\nconst _hoisted_1 = {\n  key: 0,\n  class: \"app-modal\"\n}\nconst _hoisted_2 = { class: \"app-modal__wrapper\" }\nconst _hoisted_3 = { class: \"app-modal__inner\" }\nconst _hoisted_4 = { class: \"app-modal__content\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'AppModal',\n  props: {\n    isOpened: { type: Boolean }\n  },\n  emits: ['close-modal'],\n  setup(__props: any, { emit: __emit }) {\n\r\n\r\nconst emit = __emit\r\n\r\nconst closeModalHandler = () => {\r\nemit('close-modal')\r\n}\r\n\nreturn (_ctx: any,_cache: any) => {\n  return (_ctx.isOpened)\n    ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n        _createElementVNode(\"div\", _hoisted_2, [\n          _createElementVNode(\"div\", _hoisted_3, [\n            _createElementVNode(\"button\", {\n              class: \"app-modal__close-button\",\n              onClick: closeModalHandler\n            }, \"X\"),\n            _createElementVNode(\"div\", _hoisted_4, [\n              _renderSlot(_ctx.$slots, \"default\")\n            ])\n          ])\n        ])\n      ]))\n    : _createCommentVNode(\"\", true)\n}\n}\n\n})",
+      "start": 1790757229812,
+      "end": 1790757229812
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1790757229812,
+      "end": 1790757229812,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1790757229812,
+      "end": 1790757229812,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1790757229812,
+      "end": 1790757229812,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1790757229812,
+      "end": 1790757229812,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { createElementVNode as _createElementVNode, renderSlot as _renderSlot, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode } from \"vue\";\nconst _hoisted_1 = {\n  key: 0,\n  class: \"app-modal\"\n};\nconst _hoisted_2 = { class: \"app-modal__wrapper\" };\nconst _hoisted_3 = { class: \"app-modal__inner\" };\nconst _hoisted_4 = { class: \"app-modal__content\" };\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"AppModal\",\n  props: {\n    isOpened: { type: Boolean }\n  },\n  emits: [\"close-modal\"],\n  setup(__props, { emit: __emit }) {\n    const emit = __emit;\n    const closeModalHandler = () => {\n      emit(\"close-modal\");\n    };\n    return (_ctx, _cache) => {\n      return _ctx.isOpened ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n        _createElementVNode(\"div\", _hoisted_2, [\n          _createElementVNode(\"div\", _hoisted_3, [\n            _createElementVNode(\"button\", {\n              class: \"app-modal__close-button\",\n              onClick: closeModalHandler\n            }, \"X\"),\n            _createElementVNode(\"div\", _hoisted_4, [\n              _renderSlot(_ctx.$slots, \"default\")\n            ])\n          ])\n        ])\n      ])) : _createCommentVNode(\"\", true);\n    };\n  }\n});\n",
+      "start": 1790757229815,
+      "end": 1790757229848,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "J:/Javascript-practice/abduragimov-cv/cv/components/AppModal.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, renderSlot as _renderSlot, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode } from \"vue\"\n\nconst _hoisted_1 = {\n  key: 0,\n  class: \"app-modal\"\n}\nconst _hoisted_2 = { class: \"app-modal__wrapper\" }\nconst _hoisted_3 = { class: \"app-modal__inner\" }\nconst _hoisted_4 = { class: \"app-modal__content\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'AppModal',\n  props: {\n    isOpened: { type: Boolean }\n  },\n  emits: ['close-modal'],\n  setup(__props: any, { emit: __emit }) {\n\r\n\r\nconst emit = __emit\r\n\r\nconst closeModalHandler = () => {\r\nemit('close-modal')\r\n}\r\n\nreturn (_ctx: any,_cache: any) => {\n  return (_ctx.isOpened)\n    ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n        _createElementVNode(\"div\", _hoisted_2, [\n          _createElementVNode(\"div\", _hoisted_3, [\n            _createElementVNode(\"button\", {\n              class: \"app-modal__close-button\",\n              onClick: closeModalHandler\n            }, \"X\"),\n            _createElementVNode(\"div\", _hoisted_4, [\n              _renderSlot(_ctx.$slots, \"default\")\n            ])\n          ])\n        ])\n      ]))\n    : _createCommentVNode(\"\", true)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,sBAAsB,qBAAqB,cAAc,aAAa,aAAa,YAAY,sBAAsB,qBAAqB,sBAAsB,2BAA2B;AAEpM,MAAM,aAAa;AAAA,EACjB,KAAK;AAAA,EACL,OAAO;AACT;AACA,MAAM,aAAa,EAAE,OAAO,qBAAqB;AACjD,MAAM,aAAa,EAAE,OAAO,mBAAmB;AAC/C,MAAM,aAAa,EAAE,OAAO,qBAAqB;AAGjD,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACL,UAAU,EAAE,MAAM,QAAQ;AAAA,EAC5B;AAAA,EACA,OAAO,CAAC,aAAa;AAAA,EACrB,MAAM,SAAc,EAAE,MAAM,OAAO,GAAG;AAGxC,UAAM,OAAO;AAEb,UAAM,oBAAoB,MAAM;AAChC,WAAK,aAAa;AAAA,IAClB;AAEA,WAAO,CAAC,MAAU,WAAgB;AAChC,aAAQ,KAAK,YACR,WAAW,GAAG,oBAAoB,OAAO,YAAY;AAAA,QACpD,oBAAoB,OAAO,YAAY;AAAA,UACrC,oBAAoB,OAAO,YAAY;AAAA,YACrC,oBAAoB,UAAU;AAAA,cAC5B,OAAO;AAAA,cACP,SAAS;AAAA,YACX,GAAG,GAAG;AAAA,YACN,oBAAoB,OAAO,YAAY;AAAA,cACrC,YAAY,KAAK,QAAQ,SAAS;AAAA,YACpC,CAAC;AAAA,UACH,CAAC;AAAA,QACH,CAAC;AAAA,MACH,CAAC,KACD,oBAAoB,IAAI,IAAI;AAAA,IAClC;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1790757229849,
+      "end": 1790757229849,
+      "order": "normal"
+    }
+  ]
+}

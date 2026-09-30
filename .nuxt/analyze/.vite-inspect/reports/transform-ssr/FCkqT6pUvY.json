@@ -1,0 +1,268 @@
+{
+  "resolvedId": "J:/Javascript-practice/abduragimov-cv/cv/components/AppFrame.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderStyle as _ssrRenderStyle, ssrRenderSlot as _ssrRenderSlot, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'AppFrame',\n  __ssrInlineRender: true,\n  props: {\n    source: {},\n    width: {},\n    height: {},\n    allow: {}\n  },\n  emits: ['close-frame'],\n  setup(__props: any) {\n\r\n  \r\n  \r\n  \nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"app-frame\" }, _attrs))\n  }><div class=\"app-frame__wrapper\"><div class=\"app-frame__inner\"><iframe class=\"app-frame__frame\"${\n    _ssrRenderAttr(\"src\", _ctx.source)\n  }${\n    _ssrRenderAttr(\"allow\", _ctx.allow)\n  } style=\"${\n    _ssrRenderStyle({\"border\":\"none\"})\n  }\" loading=\"lazy\"${\n    _ssrRenderAttr(\"width\", _ctx.width)\n  }${\n    _ssrRenderAttr(\"height\", _ctx.height)\n  }></iframe></div></div>`)\n  _ssrRenderSlot(_ctx.$slots, \"default\", {}, null, _push, _parent)\n  _push(`</div>`)\n}\n}\n\n})",
+      "start": 1790757231335,
+      "end": 1790757231335,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "J:/Javascript-practice/abduragimov-cv/cv/components/AppFrame.vue"
+        ],
+        "sourcesContent": [
+          "<template >\r\n  <div class=\"app-frame\">\r\n    <div class=\"app-frame__wrapper\">\r\n    <div class=\"app-frame__inner\">\r\n      <iframe class=\"app-frame__frame\" :src=\"source\" :allow=\"allow\" style=\"border: none;\" loading=\"lazy\" :width=width :height=height></iframe>\r\n    </div>\r\n  </div>\r\n    <slot/>\r\n  </div>\r\n  </template>\r\n  <script lang=\"ts\" setup>\r\n  defineProps<{\r\n    source?: string\r\n    width? :string\r\n    height?: string\r\n    allow?: string\r\n  }>()\r\n  defineEmits(['close-frame'])\r\n  </script>\r\n  <style lang=\"scss\">\r\n  .app-frame {\r\n    width: 100%;\r\n\r\n\r\n    &__frame {\r\n    min-height: 320px;\r\n    min-width: 680px;\r\n    @media screen and (max-width: 780px) {\r\n      min-height: 420px;\r\n    min-width: 420px;\r\n    }\r\n    @media screen and (max-width: 460px) {\r\n    \r\n    min-width: 100%;\r\n    }\r\n    }\r\n  }\r\n  </style>"
+        ],
+        "names": [],
+        "mappings": ";;;;;;;;;;;;;;;;AAU0B,CAAC;AAC3B,CAAC,CAKK,CAAC;AACP,CAAC,CAA6B,CAAC;AAC/B,CAAC;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1790757231335,
+      "end": 1790757231335,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1790757231335,
+      "end": 1790757231335,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1790757231335,
+      "end": 1790757231335,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1790757231335,
+      "end": 1790757231335,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1790757231335,
+      "end": 1790757231335,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1790757231335,
+      "end": 1790757231335,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderStyle as _ssrRenderStyle, ssrRenderSlot as _ssrRenderSlot, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"AppFrame\",\n  __ssrInlineRender: true,\n  props: {\n    source: {},\n    width: {},\n    height: {},\n    allow: {}\n  },\n  emits: [\"close-frame\"],\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"app-frame\" }, _attrs))}><div class=\"app-frame__wrapper\"><div class=\"app-frame__inner\"><iframe class=\"app-frame__frame\"${_ssrRenderAttr(\"src\", _ctx.source)}${_ssrRenderAttr(\"allow\", _ctx.allow)} style=\"${_ssrRenderStyle({ \"border\": \"none\" })}\" loading=\"lazy\"${_ssrRenderAttr(\"width\", _ctx.width)}${_ssrRenderAttr(\"height\", _ctx.height)}></iframe></div></div>`);\n      _ssrRenderSlot(_ctx.$slots, \"default\", {}, null, _push, _parent);\n      _push(`</div>`);\n    };\n  }\n});\n",
+      "start": 1790757231336,
+      "end": 1790757231366,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "J:/Javascript-practice/abduragimov-cv/cv/components/AppFrame.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderStyle as _ssrRenderStyle, ssrRenderSlot as _ssrRenderSlot, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'AppFrame',\n  __ssrInlineRender: true,\n  props: {\n    source: {},\n    width: {},\n    height: {},\n    allow: {}\n  },\n  emits: ['close-frame'],\n  setup(__props: any) {\n\r\n  \r\n  \r\n  \nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"app-frame\" }, _attrs))\n  }><div class=\"app-frame__wrapper\"><div class=\"app-frame__inner\"><iframe class=\"app-frame__frame\"${\n    _ssrRenderAttr(\"src\", _ctx.source)\n  }${\n    _ssrRenderAttr(\"allow\", _ctx.allow)\n  } style=\"${\n    _ssrRenderStyle({\"border\":\"none\"})\n  }\" loading=\"lazy\"${\n    _ssrRenderAttr(\"width\", _ctx.width)\n  }${\n    _ssrRenderAttr(\"height\", _ctx.height)\n  }></iframe></div></div>`)\n  _ssrRenderSlot(_ctx.$slots, \"default\", {}, null, _push, _parent)\n  _push(`</div>`)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,cAAc,mBAAmB;AAC1C,SAAS,iBAAiB,gBAAgB,kBAAkB,iBAAiB,iBAAiB,gBAAgB,kBAAkB,uBAAuB;AAGvJ,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,OAAO;AAAA,IACL,QAAQ,CAAC;AAAA,IACT,OAAO,CAAC;AAAA,IACR,QAAQ,CAAC;AAAA,IACT,OAAO,CAAC;AAAA,EACV;AAAA,EACA,OAAO,CAAC,aAAa;AAAA,EACrB,MAAM,SAAc;AAKtB,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,OACJ,gBAAgB,YAAY,EAAE,OAAO,YAAY,GAAG,MAAM,CAAC,CAC7D,kGACE,eAAe,OAAO,KAAK,MAAM,CACnC,GACE,eAAe,SAAS,KAAK,KAAK,CACpC,WACE,gBAAgB,EAAC,UAAS,OAAM,CAAC,CACnC,mBACE,eAAe,SAAS,KAAK,KAAK,CACpC,GACE,eAAe,UAAU,KAAK,MAAM,CACtC,wBAAwB;AACxB,qBAAe,KAAK,QAAQ,WAAW,CAAC,GAAG,MAAM,OAAO,OAAO;AAC/D,YAAM,QAAQ;AAAA,IAChB;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1790757231366,
+      "end": 1790757231366,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1790757231366,
+      "end": 1790757231366,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1790757231366,
+      "end": 1790757231366,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1790757231366,
+      "end": 1790757231366,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1790757231366,
+      "end": 1790757231366,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1790757231366,
+      "end": 1790757231366,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1790757231366,
+      "end": 1790757231366,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1790757231366,
+      "end": 1790757231366,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1790757231367,
+      "end": 1790757231367,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1790757231367,
+      "end": 1790757231368,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1790757231367,
+      "end": 1790757231368,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1790757231368,
+      "end": 1790757231368,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1790757231368,
+      "end": 1790757231368,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1790757231368,
+      "end": 1790757231368,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1790757231368,
+      "end": 1790757231368,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1790757231368,
+      "end": 1790757231368,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1790757231368,
+      "end": 1790757231368,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1790757231368,
+      "end": 1790757231368,
+      "order": "normal"
+    }
+  ]
+}

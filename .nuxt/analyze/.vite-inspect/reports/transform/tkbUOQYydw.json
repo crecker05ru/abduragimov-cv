@@ -1,0 +1,222 @@
+{
+  "resolvedId": "J:/Javascript-practice/abduragimov-cv/cv/layouts/default.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, Transition as _Transition, withCtx as _withCtx, vModelCheckbox as _vModelCheckbox, withDirectives as _withDirectives, normalizeClass as _normalizeClass, renderSlot as _renderSlot, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"header\" }\nconst _hoisted_2 = { class: \"header__inner\" }\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"p\", { class: \"header__text\" }, \"My CV\", -1)\nconst _hoisted_4 = {\n  key: 0,\n  class: \"header__sun-svg header__svg\",\n  version: \"1.1\",\n  id: \"Capa_1\",\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"xmlns:xlink\": \"http://www.w3.org/1999/xlink\",\n  viewBox: \"0 0 111.69 111.69\",\n  \"xml:space\": \"preserve\"\n}\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"g\", { id: \"sun\" }, [\n  /*#__PURE__*/_createElementVNode(\"g\", null, [\n    /*#__PURE__*/_createElementVNode(\"g\", null, [\n      /*#__PURE__*/_createElementVNode(\"circle\", {\n        style: {\"fill\":\"#FCDD66\"},\n        cx: \"55.845\",\n        cy: \"55.845\",\n        r: \"55.845\"\n      })\n    ])\n  ]),\n  /*#__PURE__*/_createElementVNode(\"g\", null, [\n    /*#__PURE__*/_createElementVNode(\"g\", null, [\n      /*#__PURE__*/_createElementVNode(\"circle\", {\n        style: {\"fill\":\"#FBD009\"},\n        cx: \"55.845\",\n        cy: \"55.845\",\n        r: \"46.174\"\n      })\n    ])\n  ])\n], -1)\nconst _hoisted_6 = [\n  _hoisted_5\n]\nconst _hoisted_7 = {\n  key: 1,\n  class: \"header__moon-svg header__svg\",\n  viewBox: \"0 0 200 200\",\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"fill-rule\": \"evenodd\",\n  \"clip-rule\": \"evenodd\",\n  \"stroke-linejoin\": \"round\",\n  \"stroke-miterlimit\": \"2\"\n}\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"circle\", {\n  cx: \"100\",\n  cy: \"100\",\n  r: \"94.147\",\n  fill: \"#e4e2dc\"\n}, null, -1)\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"clipPath\", { id: \"a\" }, [\n  /*#__PURE__*/_createElementVNode(\"circle\", {\n    cx: \"100\",\n    cy: \"100\",\n    r: \"94.147\"\n  })\n], -1)\nconst _hoisted_10 = /*#__PURE__*/_createElementVNode(\"g\", { \"clip-path\": \"url(#a)\" }, [\n  /*#__PURE__*/_createElementVNode(\"path\", {\n    d: \"M173.111-46.282l59.723 39.66 25.005 67.189-19.264 69.056-56.174 44.544-71.628 3.018-59.723-39.66-25.005-67.189L45.308 1.28l56.174-44.544 71.629-3.018z\",\n    fill: \"#f6f4ef\"\n  })\n], -1)\nconst _hoisted_11 = /*#__PURE__*/_createElementVNode(\"path\", {\n  d: \"M158.551 135.006l-4.072 2.503 6.822 5.83 1.8-4.404-4.55-3.929zM116.907 69.037l-6.653 4.089 11.145 9.525 2.941-7.195-7.433-6.419zM67.138 119.523l-4.542 2.791 7.61 6.503 2.007-4.912-5.075-4.382zM80.286 37.068l4.825-3.028-8.193-6.873-2.097 5.268 5.465 4.633zM143.466 148.273l5.198-3.261-8.826-7.403-2.259 5.674 5.887 4.99z\",\n  fill: \"#e4e2dc\",\n  \"fill-rule\": \"nonzero\"\n}, null, -1)\nconst _hoisted_12 = /*#__PURE__*/_createElementVNode(\"path\", {\n  d: \"M163.108 73.155l2.628 13.525-12.051 6.679-10.076-9.398 5.824-12.486 13.675 1.68zM83.672 53.684l-7.194 20.408-21.332-.919-5.99-20.976 17.63-12.045 16.886 13.532zM91.359 125.589l-5.626-25.934 22.927-13.364 19.794 17.674-10.692 24.288-26.403-2.664zM35.02 112.946l-3.955-14.875 12.902-8.012 11.929 9.923-5.53 14.145-15.346-1.181zM104.602 180.886l-15.004-13.214 8.155-17.962 20.044 2.111 4.233 19.268-17.428 9.797z\",\n  fill: \"#e4e2dc\"\n}, null, -1)\nconst _hoisted_13 = [\n  _hoisted_8,\n  _hoisted_9,\n  _hoisted_10,\n  _hoisted_11,\n  _hoisted_12\n]\nconst _hoisted_14 = { class: \"main\" }\nconst _hoisted_15 = /*#__PURE__*/_createElementVNode(\"footer\", { class: \"footer\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"footer__inner\" }, [\n    /*#__PURE__*/_createElementVNode(\"p\", null, \"By Anvar\"),\n    /*#__PURE__*/_createElementVNode(\"a\", {\n      href: \"https://github.com/crecker05ru\",\n      target: \"_blank\"\n    }, \"Github\")\n  ])\n], -1)\n\nimport { ref,onMounted } from 'vue';\r\n\r\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'default',\n  setup(__props) {\n\r\nconst isLightTheme = ref(true)\r\nconst isChecked = ref(false)\r\nconst language = ref(\"en\")\r\n\r\nconst switchTheme = () => {\r\n  isLightTheme.value = !isLightTheme.value\r\n  localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))\r\n}\r\n\r\nonMounted(() => {\r\n  window.addEventListener(\"beforeunload\", () => {\r\n    localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))\r\n  });\r\n  const isLight = JSON.parse(localStorage.getItem('cv-theme') || \"\" )\r\n  setTimeout(() => {\r\n  isLightTheme.value = Boolean(isLight)\r\n  }, 20);\r\n  console.log('isTheme',isLight,isLightTheme.value)\r\n  window.addEventListener(\"beforeunload\", () => {\r\n    localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))\r\n  });\r\n})\r\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_AppGoogles = _resolveComponent(\"AppGoogles\")!\n\n  return (_openBlock(), _createBlock(_Transition, {\n    name: \"back\",\n    mode: \"out-in\"\n  }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"div\", {\n        class: _normalizeClass([\"default-layout\", [isLightTheme.value ? 'light-theme' : 'dark-theme']])\n      }, [\n        _createVNode(_component_AppGoogles, {\n          darkMode: !isLightTheme.value\n        }, null, 8, [\"darkMode\"]),\n        _createElementVNode(\"header\", _hoisted_1, [\n          _createElementVNode(\"div\", _hoisted_2, [\n            _hoisted_3,\n            _createElementVNode(\"label\", {\n              class: _normalizeClass([\"header__switch\", {'header__switch-checked': !isLightTheme.value}])\n            }, [\n              _createVNode(_Transition, {\n                name: \"rotate\",\n                mode: \"out-in\"\n              }, {\n                default: _withCtx(() => [\n                  (isLightTheme.value)\n                    ? (_openBlock(), _createElementBlock(\"svg\", _hoisted_4, _hoisted_6))\n                    : (!isLightTheme.value)\n                      ? (_openBlock(), _createElementBlock(\"svg\", _hoisted_7, _hoisted_13))\n                      : _createCommentVNode(\"\", true)\n                ]),\n                _: 1\n              }),\n              _withDirectives(_createElementVNode(\"input\", {\n                class: \"header__switch-input\",\n                type: \"checkbox\",\n                onClick: switchTheme,\n                \"onUpdate:modelValue\": _cache[0] || (_cache[0] = ($event: any) => ((isChecked).value = $event))\n              }, null, 512), [\n                [_vModelCheckbox, isChecked.value]\n              ])\n            ], 2)\n          ])\n        ]),\n        _createElementVNode(\"main\", _hoisted_14, [\n          _renderSlot(_ctx.$slots, \"default\")\n        ]),\n        _hoisted_15\n      ], 2)\n    ]),\n    _: 3\n  }))\n}\n}\n\n})",
+      "start": 1790757229303,
+      "end": 1790757229303
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1790757229304,
+      "end": 1790757229304,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1790757229304,
+      "end": 1790757229304,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1790757229304,
+      "end": 1790757229304,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1790757229304,
+      "end": 1790757229304,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, Transition as _Transition, withCtx as _withCtx, vModelCheckbox as _vModelCheckbox, withDirectives as _withDirectives, normalizeClass as _normalizeClass, renderSlot as _renderSlot, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = { class: \"header\" };\nconst _hoisted_2 = { class: \"header__inner\" };\nconst _hoisted_3 = /* @__PURE__ */ _createElementVNode(\"p\", { class: \"header__text\" }, \"My CV\", -1);\nconst _hoisted_4 = {\n  key: 0,\n  class: \"header__sun-svg header__svg\",\n  version: \"1.1\",\n  id: \"Capa_1\",\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"xmlns:xlink\": \"http://www.w3.org/1999/xlink\",\n  viewBox: \"0 0 111.69 111.69\",\n  \"xml:space\": \"preserve\"\n};\nconst _hoisted_5 = /* @__PURE__ */ _createElementVNode(\"g\", { id: \"sun\" }, [\n  /* @__PURE__ */ _createElementVNode(\"g\", null, [\n    /* @__PURE__ */ _createElementVNode(\"g\", null, [\n      /* @__PURE__ */ _createElementVNode(\"circle\", {\n        style: { \"fill\": \"#FCDD66\" },\n        cx: \"55.845\",\n        cy: \"55.845\",\n        r: \"55.845\"\n      })\n    ])\n  ]),\n  /* @__PURE__ */ _createElementVNode(\"g\", null, [\n    /* @__PURE__ */ _createElementVNode(\"g\", null, [\n      /* @__PURE__ */ _createElementVNode(\"circle\", {\n        style: { \"fill\": \"#FBD009\" },\n        cx: \"55.845\",\n        cy: \"55.845\",\n        r: \"46.174\"\n      })\n    ])\n  ])\n], -1);\nconst _hoisted_6 = [\n  _hoisted_5\n];\nconst _hoisted_7 = {\n  key: 1,\n  class: \"header__moon-svg header__svg\",\n  viewBox: \"0 0 200 200\",\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"fill-rule\": \"evenodd\",\n  \"clip-rule\": \"evenodd\",\n  \"stroke-linejoin\": \"round\",\n  \"stroke-miterlimit\": \"2\"\n};\nconst _hoisted_8 = /* @__PURE__ */ _createElementVNode(\"circle\", {\n  cx: \"100\",\n  cy: \"100\",\n  r: \"94.147\",\n  fill: \"#e4e2dc\"\n}, null, -1);\nconst _hoisted_9 = /* @__PURE__ */ _createElementVNode(\"clipPath\", { id: \"a\" }, [\n  /* @__PURE__ */ _createElementVNode(\"circle\", {\n    cx: \"100\",\n    cy: \"100\",\n    r: \"94.147\"\n  })\n], -1);\nconst _hoisted_10 = /* @__PURE__ */ _createElementVNode(\"g\", { \"clip-path\": \"url(#a)\" }, [\n  /* @__PURE__ */ _createElementVNode(\"path\", {\n    d: \"M173.111-46.282l59.723 39.66 25.005 67.189-19.264 69.056-56.174 44.544-71.628 3.018-59.723-39.66-25.005-67.189L45.308 1.28l56.174-44.544 71.629-3.018z\",\n    fill: \"#f6f4ef\"\n  })\n], -1);\nconst _hoisted_11 = /* @__PURE__ */ _createElementVNode(\"path\", {\n  d: \"M158.551 135.006l-4.072 2.503 6.822 5.83 1.8-4.404-4.55-3.929zM116.907 69.037l-6.653 4.089 11.145 9.525 2.941-7.195-7.433-6.419zM67.138 119.523l-4.542 2.791 7.61 6.503 2.007-4.912-5.075-4.382zM80.286 37.068l4.825-3.028-8.193-6.873-2.097 5.268 5.465 4.633zM143.466 148.273l5.198-3.261-8.826-7.403-2.259 5.674 5.887 4.99z\",\n  fill: \"#e4e2dc\",\n  \"fill-rule\": \"nonzero\"\n}, null, -1);\nconst _hoisted_12 = /* @__PURE__ */ _createElementVNode(\"path\", {\n  d: \"M163.108 73.155l2.628 13.525-12.051 6.679-10.076-9.398 5.824-12.486 13.675 1.68zM83.672 53.684l-7.194 20.408-21.332-.919-5.99-20.976 17.63-12.045 16.886 13.532zM91.359 125.589l-5.626-25.934 22.927-13.364 19.794 17.674-10.692 24.288-26.403-2.664zM35.02 112.946l-3.955-14.875 12.902-8.012 11.929 9.923-5.53 14.145-15.346-1.181zM104.602 180.886l-15.004-13.214 8.155-17.962 20.044 2.111 4.233 19.268-17.428 9.797z\",\n  fill: \"#e4e2dc\"\n}, null, -1);\nconst _hoisted_13 = [\n  _hoisted_8,\n  _hoisted_9,\n  _hoisted_10,\n  _hoisted_11,\n  _hoisted_12\n];\nconst _hoisted_14 = { class: \"main\" };\nconst _hoisted_15 = /* @__PURE__ */ _createElementVNode(\"footer\", { class: \"footer\" }, [\n  /* @__PURE__ */ _createElementVNode(\"div\", { class: \"footer__inner\" }, [\n    /* @__PURE__ */ _createElementVNode(\"p\", null, \"By Anvar\"),\n    /* @__PURE__ */ _createElementVNode(\"a\", {\n      href: \"https://github.com/crecker05ru\",\n      target: \"_blank\"\n    }, \"Github\")\n  ])\n], -1);\nimport { ref, onMounted } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"default\",\n  setup(__props) {\n    const isLightTheme = ref(true);\n    const isChecked = ref(false);\n    const language = ref(\"en\");\n    const switchTheme = () => {\n      isLightTheme.value = !isLightTheme.value;\n      localStorage.setItem(\"cv-theme\", JSON.stringify(isLightTheme.value));\n    };\n    onMounted(() => {\n      window.addEventListener(\"beforeunload\", () => {\n        localStorage.setItem(\"cv-theme\", JSON.stringify(isLightTheme.value));\n      });\n      const isLight = JSON.parse(localStorage.getItem(\"cv-theme\") || \"\");\n      setTimeout(() => {\n        isLightTheme.value = Boolean(isLight);\n      }, 20);\n      console.log(\"isTheme\", isLight, isLightTheme.value);\n      window.addEventListener(\"beforeunload\", () => {\n        localStorage.setItem(\"cv-theme\", JSON.stringify(isLightTheme.value));\n      });\n    });\n    return (_ctx, _cache) => {\n      const _component_AppGoogles = _resolveComponent(\"AppGoogles\");\n      return _openBlock(), _createBlock(_Transition, {\n        name: \"back\",\n        mode: \"out-in\"\n      }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"div\", {\n            class: _normalizeClass([\"default-layout\", [isLightTheme.value ? \"light-theme\" : \"dark-theme\"]])\n          }, [\n            _createVNode(_component_AppGoogles, {\n              darkMode: !isLightTheme.value\n            }, null, 8, [\"darkMode\"]),\n            _createElementVNode(\"header\", _hoisted_1, [\n              _createElementVNode(\"div\", _hoisted_2, [\n                _hoisted_3,\n                _createElementVNode(\"label\", {\n                  class: _normalizeClass([\"header__switch\", { \"header__switch-checked\": !isLightTheme.value }])\n                }, [\n                  _createVNode(_Transition, {\n                    name: \"rotate\",\n                    mode: \"out-in\"\n                  }, {\n                    default: _withCtx(() => [\n                      isLightTheme.value ? (_openBlock(), _createElementBlock(\"svg\", _hoisted_4, _hoisted_6)) : !isLightTheme.value ? (_openBlock(), _createElementBlock(\"svg\", _hoisted_7, _hoisted_13)) : _createCommentVNode(\"\", true)\n                    ]),\n                    _: 1\n                  }),\n                  _withDirectives(_createElementVNode(\"input\", {\n                    class: \"header__switch-input\",\n                    type: \"checkbox\",\n                    onClick: switchTheme,\n                    \"onUpdate:modelValue\": _cache[0] || (_cache[0] = ($event) => isChecked.value = $event)\n                  }, null, 512), [\n                    [_vModelCheckbox, isChecked.value]\n                  ])\n                ], 2)\n              ])\n            ]),\n            _createElementVNode(\"main\", _hoisted_14, [\n              _renderSlot(_ctx.$slots, \"default\")\n            ]),\n            _hoisted_15\n          ], 2)\n        ]),\n        _: 3\n      });\n    };\n  }\n});\n",
+      "start": 1790757229309,
+      "end": 1790757229339,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "J:/Javascript-practice/abduragimov-cv/cv/layouts/default.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, Transition as _Transition, withCtx as _withCtx, vModelCheckbox as _vModelCheckbox, withDirectives as _withDirectives, normalizeClass as _normalizeClass, renderSlot as _renderSlot, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"header\" }\nconst _hoisted_2 = { class: \"header__inner\" }\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"p\", { class: \"header__text\" }, \"My CV\", -1)\nconst _hoisted_4 = {\n  key: 0,\n  class: \"header__sun-svg header__svg\",\n  version: \"1.1\",\n  id: \"Capa_1\",\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"xmlns:xlink\": \"http://www.w3.org/1999/xlink\",\n  viewBox: \"0 0 111.69 111.69\",\n  \"xml:space\": \"preserve\"\n}\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"g\", { id: \"sun\" }, [\n  /*#__PURE__*/_createElementVNode(\"g\", null, [\n    /*#__PURE__*/_createElementVNode(\"g\", null, [\n      /*#__PURE__*/_createElementVNode(\"circle\", {\n        style: {\"fill\":\"#FCDD66\"},\n        cx: \"55.845\",\n        cy: \"55.845\",\n        r: \"55.845\"\n      })\n    ])\n  ]),\n  /*#__PURE__*/_createElementVNode(\"g\", null, [\n    /*#__PURE__*/_createElementVNode(\"g\", null, [\n      /*#__PURE__*/_createElementVNode(\"circle\", {\n        style: {\"fill\":\"#FBD009\"},\n        cx: \"55.845\",\n        cy: \"55.845\",\n        r: \"46.174\"\n      })\n    ])\n  ])\n], -1)\nconst _hoisted_6 = [\n  _hoisted_5\n]\nconst _hoisted_7 = {\n  key: 1,\n  class: \"header__moon-svg header__svg\",\n  viewBox: \"0 0 200 200\",\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"fill-rule\": \"evenodd\",\n  \"clip-rule\": \"evenodd\",\n  \"stroke-linejoin\": \"round\",\n  \"stroke-miterlimit\": \"2\"\n}\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"circle\", {\n  cx: \"100\",\n  cy: \"100\",\n  r: \"94.147\",\n  fill: \"#e4e2dc\"\n}, null, -1)\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"clipPath\", { id: \"a\" }, [\n  /*#__PURE__*/_createElementVNode(\"circle\", {\n    cx: \"100\",\n    cy: \"100\",\n    r: \"94.147\"\n  })\n], -1)\nconst _hoisted_10 = /*#__PURE__*/_createElementVNode(\"g\", { \"clip-path\": \"url(#a)\" }, [\n  /*#__PURE__*/_createElementVNode(\"path\", {\n    d: \"M173.111-46.282l59.723 39.66 25.005 67.189-19.264 69.056-56.174 44.544-71.628 3.018-59.723-39.66-25.005-67.189L45.308 1.28l56.174-44.544 71.629-3.018z\",\n    fill: \"#f6f4ef\"\n  })\n], -1)\nconst _hoisted_11 = /*#__PURE__*/_createElementVNode(\"path\", {\n  d: \"M158.551 135.006l-4.072 2.503 6.822 5.83 1.8-4.404-4.55-3.929zM116.907 69.037l-6.653 4.089 11.145 9.525 2.941-7.195-7.433-6.419zM67.138 119.523l-4.542 2.791 7.61 6.503 2.007-4.912-5.075-4.382zM80.286 37.068l4.825-3.028-8.193-6.873-2.097 5.268 5.465 4.633zM143.466 148.273l5.198-3.261-8.826-7.403-2.259 5.674 5.887 4.99z\",\n  fill: \"#e4e2dc\",\n  \"fill-rule\": \"nonzero\"\n}, null, -1)\nconst _hoisted_12 = /*#__PURE__*/_createElementVNode(\"path\", {\n  d: \"M163.108 73.155l2.628 13.525-12.051 6.679-10.076-9.398 5.824-12.486 13.675 1.68zM83.672 53.684l-7.194 20.408-21.332-.919-5.99-20.976 17.63-12.045 16.886 13.532zM91.359 125.589l-5.626-25.934 22.927-13.364 19.794 17.674-10.692 24.288-26.403-2.664zM35.02 112.946l-3.955-14.875 12.902-8.012 11.929 9.923-5.53 14.145-15.346-1.181zM104.602 180.886l-15.004-13.214 8.155-17.962 20.044 2.111 4.233 19.268-17.428 9.797z\",\n  fill: \"#e4e2dc\"\n}, null, -1)\nconst _hoisted_13 = [\n  _hoisted_8,\n  _hoisted_9,\n  _hoisted_10,\n  _hoisted_11,\n  _hoisted_12\n]\nconst _hoisted_14 = { class: \"main\" }\nconst _hoisted_15 = /*#__PURE__*/_createElementVNode(\"footer\", { class: \"footer\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"footer__inner\" }, [\n    /*#__PURE__*/_createElementVNode(\"p\", null, \"By Anvar\"),\n    /*#__PURE__*/_createElementVNode(\"a\", {\n      href: \"https://github.com/crecker05ru\",\n      target: \"_blank\"\n    }, \"Github\")\n  ])\n], -1)\n\nimport { ref,onMounted } from 'vue';\r\n\r\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'default',\n  setup(__props) {\n\r\nconst isLightTheme = ref(true)\r\nconst isChecked = ref(false)\r\nconst language = ref(\"en\")\r\n\r\nconst switchTheme = () => {\r\n  isLightTheme.value = !isLightTheme.value\r\n  localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))\r\n}\r\n\r\nonMounted(() => {\r\n  window.addEventListener(\"beforeunload\", () => {\r\n    localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))\r\n  });\r\n  const isLight = JSON.parse(localStorage.getItem('cv-theme') || \"\" )\r\n  setTimeout(() => {\r\n  isLightTheme.value = Boolean(isLight)\r\n  }, 20);\r\n  console.log('isTheme',isLight,isLightTheme.value)\r\n  window.addEventListener(\"beforeunload\", () => {\r\n    localStorage.setItem('cv-theme',JSON.stringify(isLightTheme.value))\r\n  });\r\n})\r\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_AppGoogles = _resolveComponent(\"AppGoogles\")!\n\n  return (_openBlock(), _createBlock(_Transition, {\n    name: \"back\",\n    mode: \"out-in\"\n  }, {\n    default: _withCtx(() => [\n      _createElementVNode(\"div\", {\n        class: _normalizeClass([\"default-layout\", [isLightTheme.value ? 'light-theme' : 'dark-theme']])\n      }, [\n        _createVNode(_component_AppGoogles, {\n          darkMode: !isLightTheme.value\n        }, null, 8, [\"darkMode\"]),\n        _createElementVNode(\"header\", _hoisted_1, [\n          _createElementVNode(\"div\", _hoisted_2, [\n            _hoisted_3,\n            _createElementVNode(\"label\", {\n              class: _normalizeClass([\"header__switch\", {'header__switch-checked': !isLightTheme.value}])\n            }, [\n              _createVNode(_Transition, {\n                name: \"rotate\",\n                mode: \"out-in\"\n              }, {\n                default: _withCtx(() => [\n                  (isLightTheme.value)\n                    ? (_openBlock(), _createElementBlock(\"svg\", _hoisted_4, _hoisted_6))\n                    : (!isLightTheme.value)\n                      ? (_openBlock(), _createElementBlock(\"svg\", _hoisted_7, _hoisted_13))\n                      : _createCommentVNode(\"\", true)\n                ]),\n                _: 1\n              }),\n              _withDirectives(_createElementVNode(\"input\", {\n                class: \"header__switch-input\",\n                type: \"checkbox\",\n                onClick: switchTheme,\n                \"onUpdate:modelValue\": _cache[0] || (_cache[0] = ($event: any) => ((isChecked).value = $event))\n              }, null, 512), [\n                [_vModelCheckbox, isChecked.value]\n              ])\n            ], 2)\n          ])\n        ]),\n        _createElementVNode(\"main\", _hoisted_14, [\n          _renderSlot(_ctx.$slots, \"default\")\n        ]),\n        _hoisted_15\n      ], 2)\n    ]),\n    _: 3\n  }))\n}\n}\n\n})"
+        ],
+        "mappings": "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",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1790757229339,
+      "end": 1790757229339,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1790757229339,
+      "end": 1790757229341,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1790757229341,
+      "end": 1790757229341,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1790757229341,
+      "end": 1790757229341,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1790757229341,
+      "end": 1790757229341,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1790757229341,
+      "end": 1790757229341,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"J:/Javascript-practice/abduragimov-cv/cv/components/AppGoogles.vue\";\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, Transition as _Transition, withCtx as _withCtx, vModelCheckbox as _vModelCheckbox, withDirectives as _withDirectives, normalizeClass as _normalizeClass, renderSlot as _renderSlot, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = { class: \"header\" };\nconst _hoisted_2 = { class: \"header__inner\" };\nconst _hoisted_3 = /* @__PURE__ */ _createElementVNode(\"p\", { class: \"header__text\" }, \"My CV\", -1);\nconst _hoisted_4 = {\n  key: 0,\n  class: \"header__sun-svg header__svg\",\n  version: \"1.1\",\n  id: \"Capa_1\",\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"xmlns:xlink\": \"http://www.w3.org/1999/xlink\",\n  viewBox: \"0 0 111.69 111.69\",\n  \"xml:space\": \"preserve\"\n};\nconst _hoisted_5 = /* @__PURE__ */ _createElementVNode(\"g\", { id: \"sun\" }, [\n  /* @__PURE__ */ _createElementVNode(\"g\", null, [\n    /* @__PURE__ */ _createElementVNode(\"g\", null, [\n      /* @__PURE__ */ _createElementVNode(\"circle\", {\n        style: { \"fill\": \"#FCDD66\" },\n        cx: \"55.845\",\n        cy: \"55.845\",\n        r: \"55.845\"\n      })\n    ])\n  ]),\n  /* @__PURE__ */ _createElementVNode(\"g\", null, [\n    /* @__PURE__ */ _createElementVNode(\"g\", null, [\n      /* @__PURE__ */ _createElementVNode(\"circle\", {\n        style: { \"fill\": \"#FBD009\" },\n        cx: \"55.845\",\n        cy: \"55.845\",\n        r: \"46.174\"\n      })\n    ])\n  ])\n], -1);\nconst _hoisted_6 = [\n  _hoisted_5\n];\nconst _hoisted_7 = {\n  key: 1,\n  class: \"header__moon-svg header__svg\",\n  viewBox: \"0 0 200 200\",\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"fill-rule\": \"evenodd\",\n  \"clip-rule\": \"evenodd\",\n  \"stroke-linejoin\": \"round\",\n  \"stroke-miterlimit\": \"2\"\n};\nconst _hoisted_8 = /* @__PURE__ */ _createElementVNode(\"circle\", {\n  cx: \"100\",\n  cy: \"100\",\n  r: \"94.147\",\n  fill: \"#e4e2dc\"\n}, null, -1);\nconst _hoisted_9 = /* @__PURE__ */ _createElementVNode(\"clipPath\", { id: \"a\" }, [\n  /* @__PURE__ */ _createElementVNode(\"circle\", {\n    cx: \"100\",\n    cy: \"100\",\n    r: \"94.147\"\n  })\n], -1);\nconst _hoisted_10 = /* @__PURE__ */ _createElementVNode(\"g\", { \"clip-path\": \"url(#a)\" }, [\n  /* @__PURE__ */ _createElementVNode(\"path\", {\n    d: \"M173.111-46.282l59.723 39.66 25.005 67.189-19.264 69.056-56.174 44.544-71.628 3.018-59.723-39.66-25.005-67.189L45.308 1.28l56.174-44.544 71.629-3.018z\",\n    fill: \"#f6f4ef\"\n  })\n], -1);\nconst _hoisted_11 = /* @__PURE__ */ _createElementVNode(\"path\", {\n  d: \"M158.551 135.006l-4.072 2.503 6.822 5.83 1.8-4.404-4.55-3.929zM116.907 69.037l-6.653 4.089 11.145 9.525 2.941-7.195-7.433-6.419zM67.138 119.523l-4.542 2.791 7.61 6.503 2.007-4.912-5.075-4.382zM80.286 37.068l4.825-3.028-8.193-6.873-2.097 5.268 5.465 4.633zM143.466 148.273l5.198-3.261-8.826-7.403-2.259 5.674 5.887 4.99z\",\n  fill: \"#e4e2dc\",\n  \"fill-rule\": \"nonzero\"\n}, null, -1);\nconst _hoisted_12 = /* @__PURE__ */ _createElementVNode(\"path\", {\n  d: \"M163.108 73.155l2.628 13.525-12.051 6.679-10.076-9.398 5.824-12.486 13.675 1.68zM83.672 53.684l-7.194 20.408-21.332-.919-5.99-20.976 17.63-12.045 16.886 13.532zM91.359 125.589l-5.626-25.934 22.927-13.364 19.794 17.674-10.692 24.288-26.403-2.664zM35.02 112.946l-3.955-14.875 12.902-8.012 11.929 9.923-5.53 14.145-15.346-1.181zM104.602 180.886l-15.004-13.214 8.155-17.962 20.044 2.111 4.233 19.268-17.428 9.797z\",\n  fill: \"#e4e2dc\"\n}, null, -1);\nconst _hoisted_13 = [\n  _hoisted_8,\n  _hoisted_9,\n  _hoisted_10,\n  _hoisted_11,\n  _hoisted_12\n];\nconst _hoisted_14 = { class: \"main\" };\nconst _hoisted_15 = /* @__PURE__ */ _createElementVNode(\"footer\", { class: \"footer\" }, [\n  /* @__PURE__ */ _createElementVNode(\"div\", { class: \"footer__inner\" }, [\n    /* @__PURE__ */ _createElementVNode(\"p\", null, \"By Anvar\"),\n    /* @__PURE__ */ _createElementVNode(\"a\", {\n      href: \"https://github.com/crecker05ru\",\n      target: \"_blank\"\n    }, \"Github\")\n  ])\n], -1);\nimport { ref, onMounted } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"default\",\n  setup(__props) {\n    const isLightTheme = ref(true);\n    const isChecked = ref(false);\n    const language = ref(\"en\");\n    const switchTheme = () => {\n      isLightTheme.value = !isLightTheme.value;\n      localStorage.setItem(\"cv-theme\", JSON.stringify(isLightTheme.value));\n    };\n    onMounted(() => {\n      window.addEventListener(\"beforeunload\", () => {\n        localStorage.setItem(\"cv-theme\", JSON.stringify(isLightTheme.value));\n      });\n      const isLight = JSON.parse(localStorage.getItem(\"cv-theme\") || \"\");\n      setTimeout(() => {\n        isLightTheme.value = Boolean(isLight);\n      }, 20);\n      console.log(\"isTheme\", isLight, isLightTheme.value);\n      window.addEventListener(\"beforeunload\", () => {\n        localStorage.setItem(\"cv-theme\", JSON.stringify(isLightTheme.value));\n      });\n    });\n    return (_ctx, _cache) => {\n      const _component_AppGoogles = __nuxt_component_0;\n      return _openBlock(), _createBlock(_Transition, {\n        name: \"back\",\n        mode: \"out-in\"\n      }, {\n        default: _withCtx(() => [\n          _createElementVNode(\"div\", {\n            class: _normalizeClass([\"default-layout\", [isLightTheme.value ? \"light-theme\" : \"dark-theme\"]])\n          }, [\n            _createVNode(_component_AppGoogles, {\n              darkMode: !isLightTheme.value\n            }, null, 8, [\"darkMode\"]),\n            _createElementVNode(\"header\", _hoisted_1, [\n              _createElementVNode(\"div\", _hoisted_2, [\n                _hoisted_3,\n                _createElementVNode(\"label\", {\n                  class: _normalizeClass([\"header__switch\", { \"header__switch-checked\": !isLightTheme.value }])\n                }, [\n                  _createVNode(_Transition, {\n                    name: \"rotate\",\n                    mode: \"out-in\"\n                  }, {\n                    default: _withCtx(() => [\n                      isLightTheme.value ? (_openBlock(), _createElementBlock(\"svg\", _hoisted_4, _hoisted_6)) : !isLightTheme.value ? (_openBlock(), _createElementBlock(\"svg\", _hoisted_7, _hoisted_13)) : _createCommentVNode(\"\", true)\n                    ]),\n                    _: 1\n                  }),\n                  _withDirectives(_createElementVNode(\"input\", {\n                    class: \"header__switch-input\",\n                    type: \"checkbox\",\n                    onClick: switchTheme,\n                    \"onUpdate:modelValue\": _cache[0] || (_cache[0] = ($event) => isChecked.value = $event)\n                  }, null, 512), [\n                    [_vModelCheckbox, isChecked.value]\n                  ])\n                ], 2)\n              ])\n            ]),\n            _createElementVNode(\"main\", _hoisted_14, [\n              _renderSlot(_ctx.$slots, \"default\")\n            ]),\n            _hoisted_15\n          ], 2)\n        ]),\n        _: 3\n      });\n    };\n  }\n});\n",
+      "start": 1790757229341,
+      "end": 1790757229341,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1790757229341,
+      "end": 1790757229341,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1790757229341,
+      "end": 1790757229341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1790757229341,
+      "end": 1790757229341,
+      "order": "normal"
+    }
+  ]
+}
